@@ -63,18 +63,18 @@
                         <label for="name" class="form-label">Data de nascimento</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="cpf" name="cpf"
+                        <input type="text" class="form-control" id="cpf" name="cpf" maxlength="11" minlength="11"
                             placeholder="Digite seu cpf">
                         <label for="name" class="form-label">Digite seu CPF</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="telefone" name="telefone"
+                        <input type="text" class="form-control" id="telefone" name="telefone" maxlength="11" minlength="11"
                             placeholder="Telefone">
                         <label for="name" class="form-label">Telefone</label>
                     </div>
                     <div class="form-floating mb-2">
                         <input type="password" class="form-control" id="password" name="password"
-                            placeholder="Digite sua senha" required>
+                            placeholder="Digite sua senha">
                         <label for="name" class="form-label">Digite sua senha</label>
                     </div>
 
@@ -93,7 +93,7 @@
                                 notificações?</label>
                         </div> -->
                         <br>
-                        <input type="submit" class="btn btn-primary" value="Cadastro">
+                        <input type="submit" class="btn btn-primary" onclick="TestaCPF(cpf)" value="Cadastro">
                     </div>
                 </form>
             </div>
@@ -111,6 +111,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script src="javascript/funcoes.js"></script>
 </body>
 
 </html>

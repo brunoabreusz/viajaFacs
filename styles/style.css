@@ -10,17 +10,17 @@ body {
    background-color: #0164bf;
 }
 
-.SVG{
+.SVG {
    align-items: center;
    color: white;
    font-size: x-large;
 }
 
-#Bold{
+#Bold {
    font-size: x-large;
 }
 
-#TagA{
+#TagA {
    color: white;
    justify-content: center;
    text-decoration: none;
@@ -63,7 +63,7 @@ body {
 }
 
 #form-container input[type="submit"],
-#form-container input[type="checkbox"]:checked{
+#form-container input[type="checkbox"]:checked {
    background-color: #f9a510;
    border-color: #f9a510;
 }
@@ -82,19 +82,29 @@ body {
    width: 100%;
 }
 
-.footerPage{
-      bottom: 0;
-      left: 0;
-      height: 40px;
-      position: fixed;
-      width: 100%;
+.footerPage {
+   bottom: 0;
+   left: 0;
+   height: 40px;
+   position: fixed;
+   width: 100%;
 }
 
-#footerTextColor{
+#footerTextColor {
    text-decoration: none;
    color: #f9a510;
    font-size: large;
 }
+
+#Passagem {
+   text-decoration: none;
+   color: #000;
+}
+
+/* #Passagem:hover{
+   color: #ccc;
+} */
+
 
 /* IMG */
 .row.align-items-center {
@@ -110,19 +120,15 @@ body {
 
 @media(min-width: 768px) {
    #form-container {
-       margin: 100px auto;
-       padding: 50px 50px;
+      margin: 100px auto;
+      padding: 50px 50px;
    }
 
    .btn.btn-primary {
-       width: auto;
+      width: auto;
    }
 
    .col-md-6.order-md-1 {
-       padding-top: 0px;
-   }
-
-   #TagA{
-       font-size: x-large;
+      padding-top: 0px;
    }
 }
