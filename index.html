@@ -49,285 +49,332 @@
         <img src="images/salvador-viajafacs.png" class="img-fluid mx-auto d-block" alt="salvador-viajafacs">
     </div>
 
-    <div class="container mt-4 mb-2" id="Filter">
-        <h2>Passagens aéreas</h2>
-        <div class="row">
-            <div class="input-group">
-                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                    </svg></span>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Origem">
-                <datalist id="datalistOptions">
-                    <option value="Salvador">
-                    <option value="São Paulo">
-                    <option value="Belo Horizonte">
-                    <option value="Rio de Janeiro">
-                </datalist>
-
-
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Destino">
-                <datalist id="datalistOptions">
-                    <option value="Salvador">
-                    <option value="São Paulo">
-                    <option value="Belo Horizonte">
-                    <option value="Rio de Janeiro">
-                </datalist>
-                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
-                    </svg></span>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-group">
-                <span class="input-group-text">Ida</span>
-                <input type="date" aria-placeholder="Ida" class="form-control">
-                <span class="input-group-text">Volta</span>
-                <input type="date" aria-label="Volta" class="form-control">
-            </div>
-        </div>
-
-
-        <div class="form-check form-check-inline mt-3">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Ida e Volta</label>
-        </div>
-        <div class="form-check form-check-inline mt-3">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Só ida</label>
-        </div>
-        <div class="form-check form-check-inline mt-3">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
-                disabled>
-            <label class="form-check-label" for="inlineRadio3">Multidestino</label>
-        </div>
-
-
-        <button type="button" class="btn btn-success btn-sm" id="Blue">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                viewBox="0 0 16 16">
-                <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                </path>
-            </svg>
-            Buscar
-        </button>
-    </div>
-
-
-    </div>
-
-
-    <div class="container mt-4 mb-2">
-        <h2 class="">Passagens Aéreas baratas no ViajaFacs</h2>
+    <div class="container-fluid" id="GreyBackground">
         <br>
-
-        <div class="row row-cols-md-4 g-3 justify-content-around">
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/13278962/pexels-photo-13278962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
-                        <h7 class="card-text fw-normal">Saindo de São Paulo</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 318,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/13733833/pexels-photo-13733833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Salvador</h5>
-                        <h7 class="card-text fw-normal">Saindo de Rio de Janeiro</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 298,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/1518419/pexels-photo-1518419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
-                        <h7 class="card-text fw-normal">Saindo de Salvador</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 404,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/6057833/pexels-photo-6057833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
-                        <h7 class="card-text fw-normal">Saindo de São Paulo</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 660,00</b></p>
-                    </div>
-                </a>
-            </div>
+        <div class="container p-4" id="Filter">
+            <h2>Encontre os melhores voos</h2>
+            <div class="row">
+                <div class="input-group">
+                    <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg></span>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Origem">
+                    <datalist id="datalistOptions">
+                        <option value="Salvador">
+                        <option value="São Paulo">
+                        <option value="Belo Horizonte">
+                        <option value="Rio de Janeiro">
+                    </datalist>
 
 
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/14236881/pexels-photo-14236881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Salvador</h5>
-                        <h7 class="card-text fw-normal">Saindo de Belo Horizonte</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 500,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
-                        <h7 class="card-text fw-normal">Saindo de Salvador</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 400,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/13435510/pexels-photo-13435510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
-                        <h7 class="card-text fw-normal">Saindo de Rio de Janeiro</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 350,00</b></p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card p-0" style="width: 18rem">
-                <a id="Passagem" href="#!">
-                    <img src="https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" style="height: 200px;" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-text fw-normal">Passagem</h6>
-                        <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
-                        <h7 class="card-text fw-normal">Saindo de Belo Horizonte</h7>
-                        <hr>
-                        <p class="card-text fw-normal">Preço: <b>R$ 299,00</b></p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container mt-5 mb-5" id="Ajuda">
-        <h2>Perguntas frequentes sobre a ViajaFacs</h2>
-        <div class="row mt-3">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold">Que ofertas de viagem posso encontrar no ViajaFacs?</h5>
-                        <p class="card-text">Seja bem-vindo ao novo site do ViajaNet. Agora você pode encontrar tudo
-                            para sua viagem ideal. Procure as melhores ofertas em passagens aéreas, hotéis, pacotes
-                            de
-                            viagem, aluguel de carros e muito mais!</p>
-                    </div>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Destino">
+                    <datalist id="datalistOptions">
+                        <option value="Salvador">
+                        <option value="São Paulo">
+                        <option value="Belo Horizonte">
+                        <option value="Rio de Janeiro">
+                    </datalist>
+                    <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+                        </svg></span>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold">Quais são os horários de funcionamento do Central de
-                            Atendimento?</h5>
-                        <p class="card-text">As horas de funcionamento do centro de serviço são:
-                            Segunda a Sexta: Das 8hs as 19hs.
-                            Sabado, Domingo e Feriados: Das 9hs as 15hs</p>
-                    </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <span class="input-group-text">Ida</span>
+                    <input type="date" aria-placeholder="Ida" class="form-control">
+                    <span class="input-group-text">Volta</span>
+                    <input type="date" aria-label="Volta" class="form-control">
                 </div>
             </div>
+
+
+            <div class="form-check form-check-inline mt-3">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Ida e Volta</label>
+            </div>
+            <div class="form-check form-check-inline mt-3">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Só ida</label>
+            </div>
+            <div class="form-check form-check-inline mt-3">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                    disabled>
+                <label class="form-check-label" for="inlineRadio3">Multidestino</label>
+            </div>
+
+
+            <button type="button" class="btn btn-success btn-sm" id="Blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                    </path>
+                </svg>
+                Buscar
+            </button>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold">Como comprar viagens pelo telefone?</h5>
-                        <p class="card-text">No ViajaFacs você pode comprar vôos, hotéis, pacotes de viagem e muito
-                            mais
-                            em nosso centro de vendas. Se você estiver nas capitais e regiões metropolitanas ligue
-                            para
-                            4933-1246, se estiver em outras regiões ligue para 11 4933-1246.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold">Como posso verificar minha reserva?</h5>
-                        <p class="card-text">Em minhas viagens você pode ver o status e os detalhes de suas
-                            reservas,
-                            verificar a bagagem permitida em seu vôo e descobrir quais vistos e documentos você
-                            precisa
-                            para viajar. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-    <div class="container col-11 col-md-9" id=".">
-        <div class="row align-items-center gx-5">
-            <div class="col-md-6 order-md-2">
-                <img src="images/Warning.png" alt="Warning" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <div class="col-12">
-                    <h2>Ouvidoria</h2> <br>
-                    <form>
-                        <div class="text-start mb-3">
-                            <label class="form-label">E-mail:</label>
-                            <input type="email" class="form-control" placeholder="name@viajafacs.com">
+        <div class="container mt-4 mb-4">
+            <h2>Passagens Aéreas</h2>
+
+
+            <div class="row row-cols-md-4 g-4 justify-content-around">
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://media.staticontent.com/media/pictures/d184a06f-db25-4ec6-bc21-b73bc4db0ca9"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
+                            <h6 class="card-text fw-normal">Saindo de São Paulo</h6>
+                            <h7 class="card-text fw-normal">Por: <b>Gol Linhas Aéreas</b></h7> 
+                            <span class="badge text-bg-secondary">Só Ida</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 318,00</b></p>
                         </div>
+                    </a>
+                </div>
 
-                        <div class="text-start mb-3">
-                            <label class="form-label">Deixe sua reclamação:</label>
-                            <textarea class="form-control" rows="8"></textarea>
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://media.staticontent.com/media/pictures/408861fa-25f7-4b7b-a395-a5311e7c51f2"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Salvador</h5>
+                            <h6 class="card-text fw-normal">Saindo de Rio de Janeiro</h6>
+                            <h7 class="card-text fw-normal">Por: <b>Latam Airlines</b></h7>
+                            <span class="badge text-bg-secondary">Só Ida</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 298,00</b></p>
                         </div>
-                    </form>
-                    <input type="submit" id="" class="btn btn-success btn-sm" value="Entrar">
+                    </a>
+                </div>
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://media.staticontent.com/media/pictures/80081fcb-d440-45eb-a770-318317a7ae04"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
+                            <h6 class="card-text fw-normal">Saindo de Salvador</h6>
+                            <h7 class="card-text fw-normal">Por: <b>Azul</b></h7>
+                            <span class="badge text-bg-secondary">Só Ida</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 404,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://images.pexels.com/photos/6057833/pexels-photo-6057833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
+                            <h6 class="card-text fw-normal">Saindo de São Paulo</h6>
+                            <h7 class="card-text fw-normal">Por: <b>Azul</b></h7>
+                            <span class="badge text-bg-secondary">Só Ida</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 660,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://images.pexels.com/photos/14236881/pexels-photo-14236881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Salvador</h5>
+                            <h6 class="card-text fw-normal">Saindo de Belo Horizonte</h6>
+                                                        <h7 class="card-text fw-normal">Por: <b>Latam Airlines</b></h7>
+                                                        <span class="badge text-bg-secondary">Ida e Volta</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 500,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
+                            <h6 class="card-text fw-normal">Saindo de Salvador</h6>
+                            <h7 class="card-text fw-normal">Por: <b>Gol Linhas Aéreas</b></h7>
+                            <span class="badge text-bg-secondary">Ida e Volta</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 400,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://images.pexels.com/photos/13435510/pexels-photo-13435510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
+                            <h6 class="card-text fw-normal">Saindo de Rio de Janeiro</h6>
+                                                        <h7 class="card-text fw-normal">Por: <b>Gol Linhas Aéreas</b></h7>
+                                                        <span class="badge text-bg-secondary">Ida e Volta</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 350,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card p-0" style="width: 20rem">
+                    <a id="Passagem" href="#!">
+                        <img src="https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" style="height: 200px;" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-text fw-normal">Passagem</h6>
+                            <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
+                            <h6 class="card-text fw-normal">Saindo de Belo Horizonte</h6>
+                                                        <h7 class="card-text fw-normal">Por: <b>Gol Linhas Aéreas</b></h7>
+                                                        <span class="badge text-bg-secondary">Ida e Volta</span>
+                            <hr>
+                            <p class="card-text fw-normal">Preço: <b>R$ 299,00</b></p>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row row-cols-md-4 g-4 justify-content-around">
+            <figure class="figure">
+                <img src="https://media.staticontent.com/media/pictures/bf76ebe3-7301-40c6-ad17-4e3e10879159" width="300px" class="figure-img img-fluid rounded"
+                    alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">A Latam Airlines é a companhia surgida da fusão entre a chilena LAN Airlines e a TAM Linhas Aéreas. O anúncio foi feito
+                em 2010 e desde então a companhia tem crescido e conquistado novas rotas.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="https://media.staticontent.com/media/pictures/b0e700eb-ba6a-4baf-9e58-15687cb95a28" width="300px"
+                    class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Atualmente, a Azul atende 105 destinos e possui 138 aeronaves a seu serviço, o que a torna uma das companhias mais
+                completas e abrangentes de todo o país.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="https://media.staticontent.com/media/pictures/2a2f0df8-3c25-407d-8074-f76ac4961bdb" width="300px"
+                    class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Conhecida principalmente pelos preços acessíveis, a Gol Linhas Aéreas atua no mercado nacional de aviação pautada nas
+                inovações e no pioneirismo.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="https://media.staticontent.com/media/pictures/9887b3c0-5988-4a0a-83f4-e80ee1d2aeea" width="300px"
+                    class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">O ViajaFacs disponibiliza passagens aéreas em promoção, preços especiais, além de uma plataforma totalmente desenvolvida
+                para que você tenha muito mais facilidade e praticidade na busca de passagens.</figcaption>
+            </figure>
+        </div>
+</div>
+        <div class="container mt-4" id="Ajuda">
+            <h2>Perguntas frequentes sobre a ViajaFacs</h2>
+            <div class="row mt-3">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Que ofertas de viagem posso encontrar no ViajaFacs?</h5>
+                            <p class="card-text">Seja bem-vindo ao novo site do ViajaNet. Agora você pode encontrar tudo
+                                para sua viagem ideal. Procure as melhores ofertas em passagens aéreas, hotéis, pacotes
+                                de
+                                viagem, aluguel de carros e muito mais!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Quais são os horários de funcionamento do Central de
+                                Atendimento?</h5>
+                            <p class="card-text">As horas de funcionamento do centro de serviço são:
+                                Segunda a Sexta: Das 8hs as 19hs.
+                                Sabado, Domingo e Feriados: Das 9hs as 15hs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Como comprar viagens pelo telefone?</h5>
+                            <p class="card-text">No ViajaFacs você pode comprar vôos, hotéis, pacotes de viagem e muito
+                                mais
+                                em nosso centro de vendas. Se você estiver nas capitais e regiões metropolitanas ligue
+                                para
+                                4933-1246, se estiver em outras regiões ligue para 11 4933-1246.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Como posso verificar minha reserva?</h5>
+                            <p class="card-text">Em minhas viagens você pode ver o status e os detalhes de suas
+                                reservas,
+                                verificar a bagagem permitida em seu vôo e descobrir quais vistos e documentos você
+                                precisa
+                                para viajar. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container col-11 col-md-9" id=".">
+            <div class="row align-items-center gx-5">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/Warning.png" alt="Warning" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="col-12">
+                        <h2>Ouvidoria</h2> <br>
+                        <form>
+                            <div class="text-start mb-3">
+                                <label class="form-label">E-mail:</label>
+                                <input type="email" class="form-control" placeholder="name@viajafacs.com">
+                            </div>
+
+                            <div class="text-start mb-3">
+                                <label class="form-label">Deixe sua reclamação:</label>
+                                <textarea class="form-control" rows="8"></textarea>
+                            </div>
+                        </form>
+                        <input type="submit" id="" class="btn btn-success btn-sm" value="Enviar">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
     <footer class="text-center text-lg-start bg-light text-muted">
 
         <section class="border-top">

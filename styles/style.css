@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
+   font-family: 'Poppins', sans-serif;
    color: #393939;
 }
 
@@ -110,8 +112,12 @@ body {
 }
 
 #Filter {
-   background-color: #fefefe;
-   border-radius: 20px;
+   background-color: #fff;
+   border-radius: 7px;
+}
+
+#Filter input{
+   text-align: center;
 }
 
 #Filter span {
@@ -119,13 +125,9 @@ body {
    background-color: #fff;
 }
 
-#Filter button {
-   background-color: #0164bf;
-   border: none;
-}
 
-#Filter button:hover {
-   background-color: #f9a510;
+#GreyBackground{
+   background-color: #eeeeee;
 }
 
 /* IMG */
