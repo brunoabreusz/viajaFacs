@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+   color: #393939;
 }
 
 /* Style for login and register  */
@@ -101,10 +105,28 @@ body {
    color: #000;
 }
 
-#Passagem:hover{
+#Passagem:hover {
    color: #393939;
 }
 
+#Filter {
+   background-color: #fefefe;
+   border-radius: 20px;
+}
+
+#Filter span {
+   color: #393939;
+   background-color: #fff;
+}
+
+#Filter button {
+   background-color: #0164bf;
+   border: none;
+}
+
+#Filter button:hover {
+   background-color: #f9a510;
+}
 
 /* IMG */
 .row.align-items-center {
