@@ -7,13 +7,17 @@
 
 h2 {
    font-family: 'Poppins', sans-serif;
+   color: #0164bf;
+}
+
+h6, h5, h7, p {
    color: #393939;
 }
 
 /* Style for login and register  */
 
 body {
-   background-color: #0164bf;
+   background-color: #eeeeee;
 }
 
 .SVG {
@@ -35,7 +39,7 @@ body {
 
 #form-container {
    background-color: #fff;
-   border-radius: 20px;
+   border-radius: 10px;
    box-shadow: .5px 10px 15px rgba(0, 0, 0 .2);
    margin: 40px auto;
    /*padding: 30px; */
@@ -96,12 +100,6 @@ body {
    width: 100%;
 }
 
-#footerTextColor {
-   text-decoration: none;
-   color: #f9a510;
-   font-size: large;
-}
-
 #Passagem {
    text-decoration: none;
    color: #000;
@@ -113,7 +111,7 @@ body {
 
 #Filter {
    background-color: #fff;
-   border-radius: 7px;
+   border-radius: 20px;
 }
 
 #Filter input{
@@ -128,6 +126,21 @@ body {
 
 #GreyBackground{
    background-color: #eeeeee;
+}
+
+#AmareloBtn{
+   background-color: #f9a510;
+   border-color: #f9a510;
+}
+
+#AmareloTexto{
+   color: #f9a510;
+   text-decoration: none;
+}
+
+
+.card:hover{
+   box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 /* IMG */
