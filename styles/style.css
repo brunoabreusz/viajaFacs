@@ -10,7 +10,9 @@ h2 {
    color: #0164bf;
 }
 
-h6, h5, h7, p {
+h6,
+h5,
+h7 {
    color: #393939;
 }
 
@@ -114,7 +116,7 @@ body {
    border-radius: 20px;
 }
 
-#Filter input{
+#Filter input {
    text-align: center;
 }
 
@@ -124,23 +126,22 @@ body {
 }
 
 
-#GreyBackground{
+#GreyBackground {
    background-color: #eeeeee;
 }
 
-#AmareloBtn{
+#AmareloBtn {
    background-color: #f9a510;
    border-color: #f9a510;
 }
 
-#AmareloTexto{
+#AmareloTexto {
    color: #f9a510;
    text-decoration: none;
 }
 
-
-.card:hover{
-   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+.card:hover {
+   box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 /* IMG */
@@ -167,5 +168,11 @@ body {
 
    .col-md-6.order-md-1 {
       padding-top: 0px;
+   }
+}
+
+@media(max-width: 475px) {
+   #carouselExampleFade {
+      margin-top: 80px;
    }
 }

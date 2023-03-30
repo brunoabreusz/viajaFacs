@@ -14,10 +14,11 @@
 
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand">
-                <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy" style="margin-top: -1px;" />
+                <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
+                    style="margin-top: -1px;" />
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -53,23 +54,21 @@
                         <label for="email" class="form-label">Digite o seu e-mail</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="name" name="name"
-                            placeholder="Digite o seu nome">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome">
                         <label for="name" class="form-label">Digite o seu nome</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="date" class="form-control" id="data" name="data"
-                            placeholder="Data de nascimento">
+                        <input type="date" class="form-control" id="data" name="data" placeholder="Data de nascimento">
                         <label for="name" class="form-label">Data de nascimento</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="cpf" name="cpf" maxlength="11" minlength="11"
-                            placeholder="Digite seu cpf">
+                        <input type="tel" class="form-control" id="cpf" name="cpf" oninput="mascara(this)"
+                            maxlength="14" minlength="14" placeholder="Digite seu cpf">
                         <label for="name" class="form-label">Digite seu CPF</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="telefone" name="telefone" maxlength="11" minlength="11"
-                            placeholder="Telefone">
+                        <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15"
+                            onkeyup="handlePhone(event)" placeholder="Telefone">
                         <label for="name" class="form-label">Telefone</label>
                     </div>
                     <div class="form-floating mb-2">
@@ -77,7 +76,6 @@
                             placeholder="Digite sua senha">
                         <label for="name" class="form-label">Digite sua senha</label>
                     </div>
-
 
                     <div class="mb-2">
                         <div class="form-check mb-2">

@@ -14,7 +14,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand">
                 <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
@@ -45,8 +45,26 @@
         </div>
     </nav>
 
-    <div>
-        <img src="images/salvador-viajafacs.png" class="img-fluid mx-auto d-block" alt="salvador-viajafacs">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/img-salvador.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/img-saopaulo.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/img-belohorizonte.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <div class="container-fluid" id="GreyBackground">
@@ -496,7 +514,8 @@
 
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2023 Copyright:
-            <a class="fw-bold" id="AmareloTexto" target="_blank" href="https://github.com/brunoabreusz">viajafacs.com.br</a>
+            <a class="fw-bold" id="AmareloTexto" target="_blank"
+                href="https://github.com/brunoabreusz">viajafacs.com.br</a>
         </div>
 
     </footer>
