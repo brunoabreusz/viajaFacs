@@ -16,6 +16,12 @@ h7 {
    color: #393939;
 }
 
+p{
+   margin: 0;
+   padding: 0;
+   color: #393939;
+}
+
 /* Style for login and register  */
 
 body {
@@ -94,14 +100,6 @@ body {
    width: 100%;
 }
 
-.footerPage {
-   bottom: 0;
-   left: 0;
-   height: 40px;
-   position: fixed;
-   width: 100%;
-}
-
 #PassagemA {
    text-decoration: none;
    color: #fff;
@@ -135,7 +133,7 @@ body {
    background-color: #eeeeee;
 }
 
-#AmareloBtn {
+#AmareloBtn, #liveToastBtn{
    background-color: #f9a510;
    border-color: #f9a510;
 }
@@ -145,7 +143,36 @@ body {
    text-decoration: none;
 }
 
-.card:hover {
+#A-NoDecoration{
+   color: #393939;
+   text-decoration: none;
+}
+
+#A-NoDecoration:hover{
+   color: #f9a510;
+}
+
+#Tickets{
+   color: #393939;
+   text-decoration: none;
+}
+
+#Tickets:hover{
+   color: #000;
+}
+
+#BadgePequeno{
+   background-color: #0164bf;
+   color: #fff;
+   font-size: x-small;
+}
+
+#Pequeno{
+   color: #000;
+   font-size: x-small;
+}
+
+.cardT:hover {
    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
@@ -177,7 +204,7 @@ body {
 }
 
 @media(max-width: 475px) {
-   #carouselExampleFade {
+   #carouselExampleAutoplaying {
       margin-top: 80px;
    }
 }

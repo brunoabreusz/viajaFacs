@@ -47,38 +47,42 @@
         <div class="row gx-5">
             <div class="col-md-6">
                 <h2>Realize o seu cadastro</h2>
-                <form>
-                    <div class="form-floating mb-2">
+                <form name="cadastro" onsubmit="return checkPasswords()">
+                    <div class="form-floating">
                         <input type="email" class="form-control" id="email" name="email"
-                            placeholder="Digite o seu e-mail">
+                            placeholder="Digite o seu e-mail" required>
                         <label for="email" class="form-label">Digite o seu e-mail</label>
                     </div>
-                    <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome" required>
                         <label for="name" class="form-label">Digite o seu nome</label>
                     </div>
-                    <div class="form-floating mb-2">
+                    <div class="form-floating">
                         <input type="date" class="form-control" id="data" name="data" placeholder="Data de nascimento">
                         <label for="name" class="form-label">Data de nascimento</label>
                     </div>
-                    <div class="form-floating mb-2">
+                    <div class="form-floating">
                         <input type="tel" class="form-control" id="cpf" name="cpf" oninput="mascara(this)"
-                            maxlength="14" minlength="14" placeholder="Digite seu cpf">
+                            maxlength="14" minlength="14" placeholder="Digite seu cpf" required>
                         <label for="name" class="form-label">Digite seu CPF</label>
                     </div>
-                    <div class="form-floating mb-2">
+                    <div class="form-floating">
                         <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15"
-                            onkeyup="handlePhone(event)" placeholder="Telefone">
+                            onkeyup="handlePhone(event)" placeholder="Telefone" required>
                         <label for="name" class="form-label">Telefone</label>
                     </div>
-                    <div class="form-floating mb-2">
+                    <div class="form-floating">
                         <input type="password" class="form-control" id="password" name="password"
-                            placeholder="Digite sua senha">
+                            placeholder="Digite sua senha" required>
                         <label for="name" class="form-label">Digite sua senha</label>
                     </div>
-
-                    <div class="mb-2">
-                        <div class="form-check mb-2">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="con-password" name="con-password"
+                            placeholder="Confirme sua senha" required>
+                        <label for="name" class="form-label">Confirme sua senha</label>
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check mb-3">
                             <input type="checkbox" class="form-check-input" value="" id="agree-form" name="agree-form">
                             <label for="agree-form" class="form-check-label">Você aceita os<a
                                     href="https://policies.google.com/terms?hl=pt-BR" target="_blank"><b> termos de
@@ -90,8 +94,7 @@
                             <label for="newsletter" class="form-check-label">Deseja receber as nossas
                                 notificações?</label>
                         </div> -->
-                        <br>
-                        <input type="submit" class="btn btn-primary" onclick="TestaCPF(cpf)" value="Cadastro">
+                        <input type="submit" class="btn btn-primary" value="Cadastro">
                     </div>
                 </form>
             </div>

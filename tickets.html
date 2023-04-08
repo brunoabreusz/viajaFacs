@@ -2,64 +2,230 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ViajaFacs - Passagens Aéreas</title>
-    <link rel="icon" href="images/iconviajafacs.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViajaFacs - Passagens Aéreas</title>
+  <link rel="icon" href="images/iconviajafacs.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand">
-                <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
-                    style="margin-top: -1px;" />
-            </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand">
+        <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy" style="margin-top: -1px;" />
+      </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">Cadastre-se</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active">Passagens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <nav
+      style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+      aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"></li>
+        <li class="breadcrumb-item"><a href="#!" id="A-NoDecoration">Passagens aéreas para Belo Horizonte</a></li>
+        <li class="breadcrumb-item"><a href="#!" id="A-NoDecoration">Passagens aéreas para São Paulo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Passagens aéreas para Rio de Janeiro</li>
+      </ol>
     </nav>
+  </div>
+  <div class="container">
+    <h2>Passagens aéreas para Rio de Janeiro</h2>
 
-    <div class="container mt-5">
-        <h2>Passagens aéreas para Rio de Janeiro</h2>
+    <div class="card cardT mt-4">
+      <a href="checkout.html" id="Tickets">
+        <div class="row g-0 text-center m-2">
+          <div class="col fw-normal">
+            <img src="https://media.staticontent.com/media/pictures/2a2f0df8-3c25-407d-8074-f76ac4961bdb"
+              width="110px" />Gol Airlines
+          </div>
 
-        <div class="card mt-5">
-            <a href="checkout.html">
-                <div class="card-body d-flex justify-content-center">
-                    <img src="https://media.staticontent.com/media/pictures/2a2f0df8-3c25-407d-8074-f76ac4961bdb"
-                        width="200px">
-                    <figcaption class="figure-caption">GOL</figcaption>
-                    <h5 class="card-title text-center">Special title treatment</h5>
-                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>
-                </div>
-            </a>
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Ida <b id="Pequeno">GRU > GIG</b></p>
+            <p class="card-text fw-normal">Sábado, - 6 mai. 2023</p>
+            <p class="card-text fw-normal">17:40 PM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Volta <b id="Pequeno">GIG > GRU</b></p>
+            <p class="card-text fw-normal">Quinta, - 11 mai. 2023</p>
+            <p class="card-text fw-normal">10:35 AM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal">A partir de</p>
+            <p class="card-text fw-normal"><b>R$ 318,00</b></p>
+            <p class="card-text fw-normal">4 dias</p>
+          </div>
         </div>
+      </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <div class="card cardT mt-5">
+      <a href="checkout.html" id="Tickets">
+        <div class="row g-0 text-center m-2">
+          <div class="col fw-normal">
+            <img src="https://media.staticontent.com/media/pictures/bf76ebe3-7301-40c6-ad17-4e3e10879159"
+              width="110px" />Latam Airlines
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Ida <b id="Pequeno">GRU > GIG</b></p>
+            <p class="card-text fw-normal">Domingo, - 7 mai. 2023</p>
+            <p class="card-text fw-normal">18:40 PM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Volta <b id="Pequeno">GIG > GRU</b></p>
+            <p class="card-text fw-normal">Sexta, - 12 mai. 2023</p>
+            <p class="card-text fw-normal">12:35 AM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal">A partir de</p>
+            <p class="card-text fw-normal"><b>R$ 288,00</b></p>
+            <p class="card-text fw-normal">4 dias</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card cardT mt-5">
+      <a href="checkout.html" id="Tickets">
+        <div class="row g-0 text-center m-2">
+          <div class="col fw-normal">
+            <img src="https://media.staticontent.com/media/pictures/b0e700eb-ba6a-4baf-9e58-15687cb95a28"
+              width="110px" />Azul Airlines
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Ida <b id="Pequeno">GRU > GIG</b></p>
+            <p class="card-text fw-normal">Segunda, - 8 mai. 2023</p>
+            <p class="card-text fw-normal">10:40 PM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Volta <b id="Pequeno">GIG > GRU</b></p>
+            <p class="card-text fw-normal">Quinta, - 11 mai. 2023</p>
+            <p class="card-text fw-normal">09:35 AM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal">A partir de</p>
+            <p class="card-text fw-normal"><b>R$ 340,00</b></p>
+            <p class="card-text fw-normal">4 dias</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card cardT mt-5">
+      <a href="checkout.html" id="Tickets">
+        <div class="row g-0 text-center m-2">
+          <div class="col fw-normal">
+            <img src="https://media.staticontent.com/media/pictures/9887b3c0-5988-4a0a-83f4-e80ee1d2aeea"
+              width="110px" />VoePass Airlines
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Ida <b id="Pequeno">GRU > GIG</b></p>
+            <p class="card-text fw-normal">Domingo, - 28 mai. 2023</p>
+            <p class="card-text fw-normal">00:40 PM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+              </svg> Volta <b id="Pequeno">GIG > GRU</b></p>
+            <p class="card-text fw-normal">Terça, - 30 mai. 2023</p>
+            <p class="card-text fw-normal">07:00 AM</p>
+          </div>
+
+          <div class="col-sm">
+            <p class="card-text fw-normal">A partir de</p>
+            <p class="card-text fw-normal"><b>R$ 200,00</b></p>
+            <p class="card-text fw-normal">3 dias</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <button type="button" class="btn btn-primary mt-3 mb-5" id="liveToastBtn">Ver mais voos</button>
+  </div>
+
+
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/iconviajafacs.png" class="rounded me-2" alt="...">
+        <p class="me-auto">ViajaFacs</p>
+        <small>1 seg</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Sem mais voos no momento....
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="javascript/funcoes.js"></script>
 </body>
 
 </html>
