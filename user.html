@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViajaFacs - Agência de viagens</title>
+    <title>ViajaFacs</title>
     <link rel="icon" href="images/iconviajafacs.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,11 +14,11 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
-                    style="margin-top: -1px;" />
+                    style="margin-top: -1px;"/>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,16 +29,23 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">Home</a>
+                        <a class="nav-link active fs-7" id="Blue" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                              </svg>
+                            Carlos Olympio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="./user/checkin.html">Check-in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Cadastre-se</a>
+                        <a class="nav-link" href="user/cancellation.html">Cancelamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Ajuda">Ajuda</a>
+                        <a class="nav-link" href="user/centerhelp.html">Central de Ajuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Sair</a>
                     </li>
                 </ul>
             </div>

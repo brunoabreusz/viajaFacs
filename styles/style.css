@@ -172,6 +172,20 @@ body {
    font-size: x-small;
 }
 
+#Blue{
+   /* background-color: #0164bf; */
+   color: #0164bf;
+}
+
+#Yellow{
+   background-color: #f9a510;
+}
+
+#White{
+   color: #eeeeee;
+}
+
+
 .cardT:hover {
    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }

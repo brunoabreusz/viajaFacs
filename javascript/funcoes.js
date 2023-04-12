@@ -55,3 +55,20 @@ function checkPasswords() {
   return true;
 }
 
+function checkReclamacao(){
+  var textoR = document.forms["reclamacao"]["reclamacaoTxt"].value;
+  // var emailR = document.forms["reclamacao"]["reclamacaoEmail"].value;
+
+  if(!textoR){
+    alert("Preencha a reclamação");
+    return false;
+  }
+
+  alert("Reclamação cadastrada.");
+
+  setTimeout(() => {
+    location.reload(true)
+  }, 10);
+  
+  return true;
+}
