@@ -160,6 +160,10 @@ body {
    text-decoration: none;
 }
 
+#A-NoDecoration h2:hover{
+   color: #f9a510;
+}
+
 #A-NoDecoration:hover{
    color: #f9a510;
 }
