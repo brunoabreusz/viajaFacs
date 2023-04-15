@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ViajaFacs - Check-in</title>
+    <title>ViajaFacs - Cancelamaneto</title>
     <link rel="icon" href="../images/iconviajafacs.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -28,20 +28,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active fs-7" id="Blue" aria-current="page">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-                              </svg>
-                            Carlos Olympio</a>
+                        <a class="nav-link" href="../user.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../user.html">Voltar</a>
+                        <a class="nav-link active">Cancelamaneto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Sair</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid p-5" id="Yellow">
+    <div class="container-fluid p-4" id="Yellow">
         <h1 class="text-center fw-bold" id="White">Cancelamaneto</h1>
     </div>
 
@@ -52,25 +51,31 @@
                 <img src="../images/Cancel.png" alt="Warning" class="img-fluid mx-auto d-block">
             </div>
             <div class="col-md-6 order-md-1">
+                <div class="text-start mb-3">
+                    <h4><b>Olá, Carlos Olympio!</b></h4>
+                </div>
                 <div class="col-12">
-                    <h2>Digite o código da sua passagem para efetuar o cancelamento</h2> <br>
-                    <form name="reclamacao" onsubmit="return checkReclamacao()">
-                        <div class="text-start mb-3">
-                            <input type="text" class="form-control" placeholder="645616354564" id="idPassagem" required>
-                        </div>
+                    <div class="col-12">
+                        <h2>Digite o código da sua passagem para efetuar o cancelamento</h2> <br>
+                        <form name="reclamacao" onsubmit="return checkReclamacao()">
+                            <div class="text-start mb-3">
+                                <input type="text" class="form-control" placeholder="645616354564" id="idPassagem"
+                                    required>
+                            </div>
 
-                        <button type="submit" class="btn btn-success btn-sm" id="AmareloBtn">Realizar Cancelamaneto</button>
-                    </form>
+                            <button type="submit" class="btn btn-success btn-sm" id="AmareloBtn">Realizar
+                                Cancelamaneto</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-    <script src="../javascript/funcoes.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="../javascript/funcoes.js"></script>
 </body>
 
 </html>

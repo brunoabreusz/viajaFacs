@@ -37,9 +37,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="register.html">Cadastre-se</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Ajuda">Ajuda</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -132,7 +129,7 @@
 
 
             <button type="button" class="btn btn-success btn-sm" id="AmareloBtn">
-                <a href="tickets.html" id="PassagemA">
+                <a onclick="requestLogin()" id="PassagemA">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-search" viewBox="0 0 16 16">
                         <path
@@ -152,7 +149,7 @@
             <div class="row row-cols-md-4 g-4 justify-content-around">
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem"  onclick="requestLogin()">
                         <img src="https://media.staticontent.com/media/pictures/d184a06f-db25-4ec6-bc21-b73bc4db0ca9"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -160,7 +157,7 @@
                             <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
                             <h6 class="card-text fw-normal">Saindo de São Paulo</h6>
                             <h7 class="card-text fw-normal">Por: <b>Gol Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Só Ida</span>
+                            <span class="badge" id="BadgePequenoB">Ida</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 318,00</b></p>
                         </div>
@@ -168,7 +165,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://media.staticontent.com/media/pictures/408861fa-25f7-4b7b-a395-a5311e7c51f2"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -176,7 +173,7 @@
                             <h5 class="card-title fw-semibold">Voos para Salvador</h5>
                             <h6 class="card-text fw-normal">Saindo de Rio de Janeiro</h6>
                             <h7 class="card-text fw-normal">Por: <b>Latam Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Só Ida</span>
+                            <span class="badge" id="BadgePequenoB">Ida</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 298,00</b></p>
                         </div>
@@ -184,7 +181,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://media.staticontent.com/media/pictures/80081fcb-d440-45eb-a770-318317a7ae04"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -192,7 +189,7 @@
                             <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
                             <h6 class="card-text fw-normal">Saindo de Salvador</h6>
                             <h7 class="card-text fw-normal">Por: <b>Azul Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Só Ida</span>
+                            <span class="badge" id="BadgePequenoB">Ida</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 404,00</b></p>
                         </div>
@@ -200,7 +197,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://images.pexels.com/photos/6057833/pexels-photo-6057833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -208,7 +205,7 @@
                             <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
                             <h6 class="card-text fw-normal">Saindo de São Paulo</h6>
                             <h7 class="card-text fw-normal">Por: <b>Azul Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Só Ida</span>
+                            <span class="badge" id="BadgePequenoB">Ida</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 660,00</b></p>
                         </div>
@@ -218,7 +215,7 @@
 
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://images.pexels.com/photos/14236881/pexels-photo-14236881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -226,7 +223,7 @@
                             <h5 class="card-title fw-semibold">Voos para Salvador</h5>
                             <h6 class="card-text fw-normal">Saindo de Belo Horizonte</h6>
                             <h7 class="card-text fw-normal">Por: <b>Latam Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Ida e Volta</span>
+                            <span class="badge" id="BadgePequenoA">Volta</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 500,00</b></p>
                         </div>
@@ -235,7 +232,7 @@
 
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -243,7 +240,7 @@
                             <h5 class="card-title fw-semibold">Voos para Rio de Janeiro</h5>
                             <h6 class="card-text fw-normal">Saindo de Salvador</h6>
                             <h7 class="card-text fw-normal">Por: <b>Gol Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Ida e Volta</span>
+                            <span class="badge" id="BadgePequenoA">Volta</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 400,00</b></p>
                         </div>
@@ -251,7 +248,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://images.pexels.com/photos/13435510/pexels-photo-13435510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -259,7 +256,7 @@
                             <h5 class="card-title fw-semibold">Voos para Belo Horizonte</h5>
                             <h6 class="card-text fw-normal">Saindo de Rio de Janeiro</h6>
                             <h7 class="card-text fw-normal">Por: <b>Gol Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Ida e Volta</span>
+                            <span class="badge" id="BadgePequenoA">Volta</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 350,00</b></p>
                         </div>
@@ -267,7 +264,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" onclick="requestLogin()">
                         <img src="https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
@@ -275,7 +272,7 @@
                             <h5 class="card-title fw-semibold">Voos para São Paulo</h5>
                             <h6 class="card-text fw-normal">Saindo de Belo Horizonte</h6>
                             <h7 class="card-text fw-normal">Por: <b>Gol Airlines</b></h7>
-                            <span class="badge" id="BadgePequeno">Ida e Volta</span>
+                            <span class="badge" id="BadgePequenoA">Volta</span>
                             <hr>
                             <p class="card-text fw-normal">Preço: <b>R$ 299,00</b></p>
                         </div>
@@ -377,30 +374,6 @@
         </div>
 
         <br><br>
-        <!-- <div class="container col-11 col-md-9" id=".">
-            <div class="row align-items-center gx-5">
-                <div class="col-md-6 order-md-2">
-                    <img src="images/Warning.png" alt="Warning" class="img-fluid mx-auto d-block">
-                </div>
-                <div class="col-md-6 order-md-1">
-                    <div class="col-12">
-                        <h2>Ouvidoria</h2> <br>
-                        <form name="reclamacao" onsubmit="return checkReclamacao()">
-                            <div class="text-start mb-3">
-                                <label class="form-label">E-mail:</label>
-                                <input type="email" class="form-control" placeholder="name@viajafacs.com" id="reclamacaoEmail" required>
-                            </div>
-
-                            <div class="text-start mb-3">
-                                <label class="form-label">Deixe sua reclamação:</label>
-                                <textarea type="text" class="form-control" rows="8" id="reclamacaoTxt"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success btn-sm" id="AmareloBtn">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <footer class="bg-light">
@@ -422,37 +395,6 @@
                             ampliando sua presença em destinos nacionais.
                         </p>
                     </div>
-
-                    <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                        <h6 class="text-uppercase fw-bold mb-4" id="AmareloTexto">
-                            Parceiros
-                        </h6>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-book" viewBox="0 0 16 16">
-                                <path
-                                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-                            </svg> Universidade Salvador
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-code-square" viewBox="0 0 16 16">
-                                <path
-                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                                <path
-                                    d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
-                            </svg> Olympio Software
-                        </p>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-code-square" viewBox="0 0 16 16">
-                                <path
-                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                                <path
-                                    d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
-                            </svg> Abreusz Software
-                        </p>
-                    </div> -->
 
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
 

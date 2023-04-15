@@ -72,3 +72,11 @@ function checkReclamacao(){
   
   return true;
 }
+
+function requestLogin() {
+  var confirmLogin = confirm("Please log in to continue.");
+  
+  if (confirmLogin) {
+    window.location.href = "login.html";
+  }
+}

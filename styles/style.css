@@ -12,7 +12,10 @@ h2 {
 
 h6,
 h5,
+h3,
+h4,
 h7 {
+   font-family: 'Poppins', sans-serif;
    color: #393939;
 }
 
@@ -59,16 +62,25 @@ body {
    color: #0164bf;
 }
 
-#form-container a {
+#form-container a{
    color: #f9a510;
    transition: .5s;
    text-decoration: none;
 }
 
-#form-container a:hover {
+#form-container p{
+   color: #0164bf;
+   transition: .5s;
+   text-decoration: none;
+}
+
+#form-container a:hover{
    color: #0164bf;
 }
 
+#form-container p:hover{
+   color: #f9a510;
+}
 
 #form-container .form-control {
    border: none;
@@ -161,8 +173,14 @@ body {
    color: #000;
 }
 
-#BadgePequeno{
+#BadgePequenoB{
    background-color: #0164bf;
+   color: #fff;
+   font-size: x-small;
+}
+
+#BadgePequenoA{
+   background-color: #f9a510;
    color: #fff;
    font-size: x-small;
 }
@@ -173,8 +191,7 @@ body {
 }
 
 #Blue{
-   /* background-color: #0164bf; */
-   color: #0164bf;
+   background-color: #0164bf;
 }
 
 #Yellow{
