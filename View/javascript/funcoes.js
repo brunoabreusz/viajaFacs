@@ -74,9 +74,8 @@ function checkReclamacao(){
 }
 
 function requestLogin() {
-  var confirmLogin = confirm("Please log in to continue.");
-  
-  if (confirmLogin) {
-    window.location.href = "login.html";
-  }
+  setTimeout(() => {
+    window.location.href = "View/login.html";
+  }, 400);
+
 }

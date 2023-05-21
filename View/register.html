@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
                     style="margin-top: -1px;" />
             </a>
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
@@ -46,18 +46,18 @@
         <div class="row gx-5">
             <div class="col-md-6">
                 <h2>Realize o seu cadastro</h2>
-                <form name="cadastro" onsubmit="return checkPasswords()">
+                <form method="post" action="../Controller/usuarioRegister.php" onsubmit="return checkPasswords()">
                     <div class="form-floating">
                         <input type="email" class="form-control" id="email" name="email"
                             placeholder="Digite o seu e-mail" required>
                         <label for="email" class="form-label">Digite o seu e-mail</label>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" required>
                         <label for="name" class="form-label">Digite o seu nome</label>
                     </div>
                     <div class="form-floating">
-                        <input type="date" class="form-control" id="data" name="data" placeholder="Data de nascimento">
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento">
                         <label for="name" class="form-label">Data de nascimento</label>
                     </div>
                     <div class="form-floating">
@@ -71,7 +71,7 @@
                         <label for="name" class="form-label">Telefone</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="password" name="password"
+                        <input type="password" class="form-control" id="senha" name="senha"
                             placeholder="Digite sua senha" required>
                         <label for="name" class="form-label">Digite sua senha</label>
                     </div>
