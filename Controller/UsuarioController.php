@@ -1,6 +1,7 @@
 <?php 
    require_once "../Model/usuario.php";
 
+   // Atribui os valores no banco de dados:
    $user = new Usuario();
    $user->setCpf($_POST['cpf']);
    $user->setNome($_POST['nome']);

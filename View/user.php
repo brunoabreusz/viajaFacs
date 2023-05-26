@@ -76,10 +76,11 @@
         <br>
         <div class="container p-4" id="Filter">
             <div class="row">
+                
                 <div class="col text-start mb-3">
                     <h2>Ola, Carlos Olympio!</h2>
                 </div>
-
+                
                 <div class="col text-start mb-3">
                     <a href="myprofile.html" id="A-NoDecoration">
                         <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

@@ -36,7 +36,7 @@ class Usuario
             $minhasPassagens = $this->minhasPassagens;
             $id = $this->id;
             $sql->execute();
-            echo "inserido com sucesso";
+            return 'user.php';
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
