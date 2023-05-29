@@ -13,5 +13,3 @@ class UserController{
         require 'View/user.php';
     }
 }
-     
-?>

@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ViajaFacs - Cadastro</title>
-    <link rel="icon" href="images/iconviajafacs.png" type="image/png">
+    <link rel="icon" href="View/images/iconviajafacs.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="View/styles/style.css">
 
 </head>
 
@@ -16,8 +16,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
+            <a class="navbar-brand" href="home">
+                <img src="View/images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
                     style="margin-top: -1px;" />
             </a>
 
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active">Cadastre-se</a>
@@ -46,7 +46,7 @@
         <div class="row gx-5">
             <div class="col-md-6">
                 <h2>Realize o seu cadastro</h2>
-                <form method="post" action="../Controller/UsuarioController.php" onsubmit="return checkPasswords()">
+                <form method="post" action="./Controller/UsuarioController.php" onsubmit="return checkPasswords()">
                     <div class="form-floating">
                         <input type="email" class="form-control" id="email" name="email"
                             placeholder="Digite o seu e-mail" required>
@@ -100,7 +100,7 @@
             <div class="col-md-6">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <img src="images/Acess.png" class="img-fluid">
+                        <img src="View/images/Acess.png" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-    <script src="javascript/funcoes.js"></script>
+    <script src="View/javascript/funcoes.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php 
-   require_once "../Model/usuario.php";
+   require_once "../Model/Usuario.php";
 
    // Atribui os valores no banco de dados:
    $user = new Usuario();
@@ -11,4 +11,6 @@
    $user->setSenha($_POST['senha']);
    $user->incluir();
 
+   header('Location: /viajaFacs/login');
+   exit();          
 ?>

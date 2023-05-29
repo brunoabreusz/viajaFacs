@@ -3,7 +3,7 @@
 class InicioController{
     
     public function View(){
-        require "View/index.html";
+        require "View/home.html";
     }
 }
      

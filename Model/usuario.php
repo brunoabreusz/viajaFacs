@@ -17,8 +17,8 @@ class Usuario
             require_once('conectionData.php');
             $data = new Data();
             $conn = $data->conectar();
-            $sql = $conn->prepare("insert into usuario (cpf, nome, dataNascimento, email, telefone, senha, minhasPassagens, id)
-            values (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :minhasPassagens, :id)");
+            $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, minhasPassagens, id)
+            VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :minhasPassagens, :id)");
             $sql->bindParam("cpf", $cpf);
             $sql->bindParam("nome", $nome);
             $sql->bindParam("dataNascimento", $dataNascimento);
@@ -42,18 +42,19 @@ class Usuario
         }
     }
 
-    function verificarCredenciais($email, $senha) {
+    function verificarCredenciais($email, $senha)
+    {
         require_once('conectionData.php');
         $data = new Data();
         $conn = $data->conectar();
-    
+
         $sql = $conn->prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");
         $sql->bindParam(":email", $email);
         $sql->bindParam(":senha", $senha);
         $sql->execute();
-    
+
         $resultado = $sql->fetch(PDO::FETCH_ASSOC);
-    
+
         if ($resultado) {
             // As credenciais são válidas
             return true;

@@ -24,10 +24,18 @@ class LoginController
 
             if ($result) {
                 // Credenciais corretas
-                session_start();
-                $_SESSION['email'] = $email;
-                header('Location: user');                
-                exit();
+                $nome = $this->obterNomeUsuarioDoBancoDeDados($email, $senha);
+                if ($nome) {
+                    session_start();
+                    $_SESSION['email'] = $email;
+                    $_SESSION['nome'] = $nome;
+                    header('Location: user');
+                    exit();
+                } else {
+                    // Erro ao obter o nome do usuário do banco de dados
+                    header('Location: index.php?url=login&error=1');
+                    exit();
+                }
             } else {
                 // Credenciais inválidas
                 header('Location: index.php?url=login&error=1');
@@ -37,8 +45,24 @@ class LoginController
 
         require 'View/login.html';
     }
+
+    public function obterNomeUsuarioDoBancoDeDados($email, $senha)
+    {
+        $data = new Data();
+        $conn = $data->conectar();
+
+        $query = "SELECT nome FROM usuario WHERE email = :email AND senha = :senha";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->execute();
+
+        $result = $stmt->fetch();
+
+        if ($result) {
+            return $result['nome'];
+        } else {
+            return null; // Usuário não encontrado
+        }
+    }
 }
-
-?>
-
-

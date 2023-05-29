@@ -9,18 +9,21 @@ switch ($url) {
         $controlador = new InicioController();
         $controlador->View();
         break;
+    case 'cadastro':
+        require 'Controller/CadastroController.php';
+        $controller = new CadastroController();
+        $controller->View();
+        break;
     case 'login':
-		require 'Controller/LoginController.php';
+        require 'Controller/LoginController.php';
         $controller = new LoginController();
         $controller->Login();
         break;
-	case 'user':
-		require 'Controller/UserController.php';
+    case 'user':
+        require 'Controller/UserController.php';
         $controlador = new UserController();
         $controlador->Logar();
         break;
     default:
-        require '404.php';
+        require 'View/404.html';
 }
-
-?>
