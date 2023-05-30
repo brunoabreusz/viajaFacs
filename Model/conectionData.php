@@ -3,7 +3,7 @@
 class Data
 {
 
-    public function conectar()
+    public static function conectar()
     {
         $servername = "localhost";
         $username = "root";

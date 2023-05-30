@@ -11,8 +11,8 @@ class LoginController
             $email = $_POST['email'];
             $senha = $_POST['senha'];
 
-            $data = new Data();
-            $conn = $data->conectar();
+            // $data = new Data();
+            $conn = Data::conectar();
 
             $query = "SELECT * FROM usuario WHERE email = :email AND senha = :senha";
             $stmt = $conn->prepare($query);
@@ -48,8 +48,8 @@ class LoginController
 
     public function obterNomeUsuarioDoBancoDeDados($email, $senha)
     {
-        $data = new Data();
-        $conn = $data->conectar();
+        // $data = new Data();
+        $conn = Data::conectar();
 
         $query = "SELECT nome FROM usuario WHERE email = :email AND senha = :senha";
         $stmt = $conn->prepare($query);

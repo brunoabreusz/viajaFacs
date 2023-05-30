@@ -15,8 +15,8 @@ class Usuario
 
         try {
             require_once('conectionData.php');
-            $data = new Data();
-            $conn = $data->conectar();
+            // $data = new Data();
+            $conn = Data::conectar();
             $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, minhasPassagens, id)
             VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :minhasPassagens, :id)");
             $sql->bindParam("cpf", $cpf);
@@ -45,8 +45,8 @@ class Usuario
     function verificarCredenciais($email, $senha)
     {
         require_once('conectionData.php');
-        $data = new Data();
-        $conn = $data->conectar();
+        // $data = new Data();
+        $conn = Data::conectar();
 
         $sql = $conn->prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");
         $sql->bindParam(":email", $email);

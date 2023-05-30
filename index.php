@@ -14,6 +14,11 @@ switch ($url) {
         $controller = new CadastroController();
         $controller->View();
         break;
+    case 'register':
+        require 'Controller/UsuarioController.php';
+        $controller = new UsuarioController();
+        $controller->Usuario();
+        break;
     case 'login':
         require 'Controller/LoginController.php';
         $controller = new LoginController();
