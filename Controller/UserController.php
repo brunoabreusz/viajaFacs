@@ -9,7 +9,6 @@ class UserController{
             exit();
         }
 
-        // Aqui você colocaria o código para exibir a página de dashboard ou outras funcionalidades da área restrita
         require 'View/user.php';
     }
 }

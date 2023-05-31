@@ -32,7 +32,6 @@ class LoginController
                     header('Location: user');
                     exit();
                 } else {
-                    // Erro ao obter o nome do usuário do banco de dados
                     header('Location: index.php?url=login&error=1');
                     exit();
                 }
@@ -51,6 +50,7 @@ class LoginController
         // $data = new Data();
         $conn = Data::conectar();
 
+        // Procura no banco de dados o email e a senha.
         $query = "SELECT nome FROM usuario WHERE email = :email AND senha = :senha";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':email', $email);

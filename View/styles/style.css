@@ -112,6 +112,11 @@ body {
    width: 100%;
 }
 
+#A{
+   color: #fff;
+   text-decoration: none;
+}
+
 #PassagemA {
    text-decoration: none;
    color: #fff;
