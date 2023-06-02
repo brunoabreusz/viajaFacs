@@ -29,13 +29,13 @@
                         <a class="nav-link active">Home</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="./user/checkin.html">Check-in</a>
+                        <a class="nav-link" href="user/checkin">Check-in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="user/cancellation.html">Cancelamento</a>
+                        <a class="nav-link" href="user/cancellation">Cancelamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="user/centerhelp.html">Central de Ajuda</a>
+                        <a class="nav-link" href="user/centerhelp">Central de Ajuda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout">Logout</a>

@@ -75,7 +75,7 @@ function checkReclamacao(){
 
 function requestLogin() {
   setTimeout(() => {
-    window.location.href = "View/login.html";
+    window.location.href = "login";
   }, 400);
 
 }

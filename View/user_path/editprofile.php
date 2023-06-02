@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ViajaFacs - Meu Perfil</title>
+    <title>ViajaFacs - Editar Perfil</title>
     <link rel="icon" href="../View/images/iconviajafacs.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../View/styles/style.css">
@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
+                        <a class="nav-link" href="../user">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Meu Perfil</a>
+                        <a class="nav-link active">Editar Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Logout</a>
+                        <a class="nav-link" href="../logout">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -42,54 +42,37 @@
     <div class="container col-11 col-md-9" id="form-container">
         <div class="row gx-5">
             <div class="col-md-6">
-                <h2>Informações do seu Perfil</h2>
-                <form method="post" action="register" onsubmit="return checkPasswords()">
+                <h2>Editar informações do seu Perfil</h2>
+                <form method="post" action="update">
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu e-mail" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu e-mail" value="<?php echo $usuario->getEmail(); ?>">
                         <label for="email" class="form-label">Digite o seu e-mail</label>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" value="<?php echo $usuario->getNome(); ?>">
                         <label for="name" class="form-label">Digite o seu nome</label>
                     </div>
                     <div class="form-floating">
-                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento">
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento" value="<?php echo $usuario->getDataNascimento(); ?>">
                         <label for="name" class="form-label">Data de nascimento</label>
                     </div>
                     <div class="form-floating">
-                        <input type="tel" class="form-control" id="cpf" name="cpf" oninput="mascara(this)" maxlength="14" minlength="14" placeholder="Digite seu cpf" required>
+                        <input type="tel" class="form-control" id="cpf" name="cpf" oninput="mascara(this)" maxlength="14" minlength="14" placeholder="Digite seu cpf" value="<?php echo $usuario->getCpf(); ?>">
                         <label for="name" class="form-label">Digite seu CPF</label>
                     </div>
                     <div class="form-floating">
-                        <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" onkeyup="handlePhone(event)" placeholder="Telefone" required>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" onkeyup="handlePhone(event)" placeholder="Telefone" value="<?php echo $usuario->getTelefone(); ?>">
                         <label for="name" class="form-label">Telefone</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" value="<?php echo $usuario->getSenha(); ?>">
                         <label for="name" class="form-label">Digite sua senha</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="con-password" name="con-password" placeholder="Confirme sua senha" required>
-                        <label for="name" class="form-label">Confirme sua senha</label>
+
+                    <div class="mt-3 mb-3">
+                        <input type="submit" class="btn btn-success" id="AmareloBtn" value="Salvar">
                     </div>
-                    <div class="mt-2">
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" value="" id="agree-form" name="agree-form">
-                            <label for="agree-form" class="form-check-label">Você aceita os<a href="https://policies.google.com/terms?hl=pt-BR" target="_blank"><b> termos de
-                                        serviços</b></a>?</label>
-                        </div>
-                        <!-- <div class="form-check mb-2">
-                            <input type="checkbox" class="form-check-input" value="" id="newsletter" name="newsletter"
-                                checked>
-                            <label for="newsletter" class="form-check-label">Deseja receber as nossas
-                                notificações?</label>
-                        </div> -->
-                        <button type="button" class="btn btn-success btn-sm" id="AmareloBtn">
-                            <a onclick="requestLogin()" id="PassagemA">
-                                Editar
-                            </a>
-                        </button>
-                    </div>
+
                 </form>
             </div>
             <div class="col-md-6">

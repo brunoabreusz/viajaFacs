@@ -17,7 +17,7 @@ switch ($url) {
     case 'register':
         require 'Controller/UsuarioController.php';
         $controlador = new UsuarioController();
-        $controlador->Usuario();
+        $controlador->cadastrarUsuario();
         break;
     case 'login':
         require 'Controller/LoginController.php';
@@ -35,9 +35,29 @@ switch ($url) {
         $controlador->View();
         break;
     case 'user/editprofile':
+        require 'Controller/EditprofileController.php';
+        $controlador = new EditprofileController();
+        $controlador->View();
+        break;
+    case 'user/update':
         require 'Controller/ProfileController.php';
         $controlador = new ProfileController();
-        $controlador->View();
+        $controlador->updateProfile();
+        break;
+    case 'user/checkin':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->checkIn();
+        break;
+    case 'user/centerhelp':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->centerHelp();
+        break;
+    case 'user/cancellation':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->cancellation();
         break;
     case 'logout':
         require 'Controller/LogoutController.php';
@@ -45,5 +65,8 @@ switch ($url) {
         $controlador->Logout();
         break;
     default:
-        require 'View/404.html';
+        require 'Controller/ErrorController.php';
+        $controlador = new ErrorController();
+        $controlador->View();
+        break;
 }
