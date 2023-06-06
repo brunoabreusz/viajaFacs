@@ -7,7 +7,6 @@ class Usuario
     private $email;
     private $telefone;
     private $senha;
-    private $minhasPassagens;
     private $id;
 
     public function incluir()
@@ -15,17 +14,15 @@ class Usuario
 
         try {
             require_once('conectionData.php');
-            // $data = new Data();
             $conn = Data::conectar();
-            $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, minhasPassagens, id)
-            VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :minhasPassagens, :id)");
+            $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, id)
+            VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :id)");
             $sql->bindParam("cpf", $cpf);
             $sql->bindParam("nome", $nome);
             $sql->bindParam("dataNascimento", $dataNascimento);
             $sql->bindParam("email", $email);
             $sql->bindParam("telefone", $telefone);
             $sql->bindParam("senha", $senha);
-            $sql->bindParam("minhasPassagens", $minhasPassagens);
             $sql->bindParam("id", $id);
             $cpf = $this->cpf;
             $nome = $this->nome;
@@ -33,7 +30,6 @@ class Usuario
             $email  = $this->email;
             $telefone = $this->telefone;
             $senha = $this->senha;
-            $minhasPassagens = $this->minhasPassagens;
             $id = $this->id;
             $sql->execute();
             return 'user.php';
@@ -45,7 +41,6 @@ class Usuario
     function verificarCredenciais($email, $senha)
     {
         require_once('conectionData.php');
-        // $data = new Data();
         $conn = Data::conectar();
 
         $sql = $conn->prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");
@@ -121,16 +116,6 @@ class Usuario
     public function setSenha($senha)
     {
         $this->senha = $senha;
-    }
-
-    public function getMinhasPassagens()
-    {
-        return $this->minhasPassagens;
-    }
-
-    public function setMinhasPassagens($minhasPassagens)
-    {
-        $this->minhasPassagens = $minhasPassagens;
     }
 
     public function getId()

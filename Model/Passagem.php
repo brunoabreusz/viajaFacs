@@ -2,8 +2,8 @@
 class Passagem
 {
     private $idPassagem;
-    private $usuario;
-    private $voo;
+    private $idVoo;
+    private $idUsuario;
     private $statusCheckin;
     private $statusCancelamento;
     
@@ -15,20 +15,20 @@ class Passagem
         $this->idPassagem = $idPassagem;
     }
 
-    public function getUsuario() {
-        return $this->usuario;
+    public function getIdVoo() {
+        return $this->idVoo;
     }
 
-    public function setUsuario($usuario) {
-        $this->usuario = $usuario;
+    public function setIdVoo($idVoo) {
+        $this->idVoo = $idVoo;
     }
 
-    public function getVoo() {
-        return $this->voo;
+    public function getIdUsuario() {
+        return $this->idUsuario;
     }
 
-    public function setVoo($voo) {
-        $this->voo = $voo;
+    public function setIdUsuario($idUsuario) {
+        $this->idUsuario = $idUsuario;
     }
 
     public function getStatusCheckin() {

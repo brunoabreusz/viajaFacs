@@ -1,61 +1,61 @@
 <?php
 class Voo
 {
-    private $numeroVoo;
-    private $nomeCompanhia;
-    private $Origem;
-    private $Destino;
-    private $dataHoraS;
-    private $dataHoraC;
+    private $idVoo;
+    private $idCompanhiaAerea;
+    private $origem;
+    private $destino;
+    private $dataHoraSaida;
+    private $dataHoraChegada;
     private $assentos;
     private $precoVoo;
 
-    public function getNumeroVoo() {
-        return $this->numeroVoo;
+    public function getIdVoo() {
+        return $this->idVoo;
     }
 
-    public function setNumeroVoo($numeroVoo) {
-        $this->numeroVoo = $numeroVoo;
+    public function setIdVoo($idVoo) {
+        $this->idVoo = $idVoo;
     }
 
-    public function getNomeCompanhia() {
-        return $this->nomeCompanhia;
+    public function getIdCompanhiaAerea() {
+        return $this->idCompanhiaAerea;
     }
 
-    public function setNomeCompanhia($nomeCompanhia) {
-        $this->nomeCompanhia = $nomeCompanhia;
+    public function setIdCompanhiaAerea($idCompanhiaAerea) {
+        $this->idCompanhiaAerea = $idCompanhiaAerea;
     }
 
     public function getOrigem() {
-        return $this->Origem;
+        return $this->origem;
     }
 
-    public function setOrigem($Origem) {
-        $this->Origem = $Origem;
+    public function setOrigem($origem) {
+        $this->origem = $origem;
     }
 
     public function getDestino() {
-        return $this->Destino;
+        return $this->destino;
     }
 
-    public function setDestino($Destino) {
-        $this->Destino = $Destino;
+    public function setDestino($destino) {
+        $this->destino = $destino;
     }
 
-    public function getDataHoraS() {
-        return $this->dataHoraS;
+    public function getDataHoraSaida() {
+        return $this->dataHoraSaida;
     }
 
-    public function setDataHoraS($dataHoraS) {
-        $this->dataHoraS = $dataHoraS;
+    public function setDataHoraSaida($dataHoraSaida) {
+        $this->dataHoraSaida = $dataHoraSaida;
     }
 
-    public function getDataHoraC() {
-        return $this->dataHoraC;
+    public function getDataHoraChegada() {
+        return $this->dataHoraChegada;
     }
 
-    public function setDataHoraC($dataHoraC) {
-        $this->dataHoraC = $dataHoraC;
+    public function setDataHoraChegada($dataHoraChegada) {
+        $this->dataHoraChegada = $dataHoraChegada;
     }
 
     public function getAssentos() {
@@ -73,4 +73,5 @@ class Voo
     public function setPrecoVoo($precoVoo) {
         $this->precoVoo = $precoVoo;
     }
+
 }

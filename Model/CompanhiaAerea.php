@@ -1,15 +1,15 @@
 <?php
 class CompanhiaAerea
 {
-    private $idCompanhia;
+    private $idCompanhiaAerea;
     private $nomeCompanhia;
 
-    public function getIdCompanhia() {
-        return $this->idCompanhia;
+    public function getIdCompanhiaAerea() {
+        return $this->idCompanhiaAerea;
     }
 
-    public function setIdCompanhia($idCompanhia) {
-        $this->idCompanhia = $idCompanhia;
+    public function setIdCompanhiaAerea($idCompanhiaAerea) {
+        $this->idCompanhiaAerea = $idCompanhiaAerea;
     }
 
     public function getNomeCompanhia() {
