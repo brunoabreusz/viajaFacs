@@ -95,7 +95,7 @@
 
             <div class="row">
                 <h3>Suas Passagens</h3>
-                <div class="col">
+                <!-- <div class="col">
                     <div class="card card cardT">
                         <div class="card-body">
                             <h6 class="card-title fw-normal"><b id="AmareloTexto">ID Passagem:</b> 500 - Rio de
@@ -104,7 +104,8 @@
                             <h6 class="card-text fw-normal"><b id="AmareloTexto">Horário:</b> 10AM</h6>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
                 <div class="col">
                     <div class="card cardT">
                         <div class="card-body">
@@ -115,6 +116,11 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col">
+                    <h6 class="card-title fw-normal"><b>Null</b></h6>
+                </div>
+
             </div>
         </div>
         <br>
@@ -122,41 +128,42 @@
         <div class="container p-4" id="Filter">
             <h2>Encontre os melhores voos</h2>
             <div class="row">
-                <form name="cadastro" onsubmit="return checkPasswords()">
+                <form method="post" action="searchVoo">
                     <div class="input-group">
                         <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                             </svg></span>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input class="form-control" list="datalistOrigem" name="origem" id="origem" placeholder="Origem" required>
+                        <datalist id="datalistOrigem">
+                            <option value="Salvador">
+                            <option value="São Paulo">
+                            <option value="Belo Horizonte">
+                            <option value="Rio de Janeiro">
+                        </datalist>
 
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input class="form-control" list="datalistDestino" name="destino" id="destino" placeholder="Destino" required>
+                        <datalist id="datalistDestino">
+                            <option value="Salvador">
+                            <option value="São Paulo">
+                            <option value="Belo Horizonte">
+                            <option value="Rio de Janeiro">
+                        </datalist>
                         <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
                             </svg></span>
                     </div>
                     <div class="form-check form-check-inline mt-3">
-                        <input class="form-check-input" type="radio" name="passagem" id="inlineRadio1" value="idaVolta">
+                        <input class="form-check-input" type="radio" name="passagem" id="idaVolta" value="idaVolta" required>
                         <label class="form-check-label" for="inlineRadio1">Ida e Volta</label>
                     </div>
                     <div class="form-check form-check-inline mt-3">
-                        <input class="form-check-input" type="radio" name="passagem" id="inlineRadio2" value="ida">
+                        <input class="form-check-input" type="radio" name="passagem" id="ida" value="ida" required>
                         <label class="form-check-label" for="inlineRadio2">Só Ida</label>
                     </div>
                     <div class="form-check form-check-inline mt-3">
                         <input class="form-check-input" type="radio" name="passagem" id="inlineRadio3" value="option3" disabled>
                         <label class="form-check-label" for="inlineRadio3">Multidestino</label>
                     </div>
-
 
                     <input type="submit" class="btn btn-success btn-sm" id="AmareloBtn" value="Buscar">
                 </form>
@@ -173,7 +180,7 @@
             <div class="row row-cols-md-4 g-4 justify-content-around">
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://media.staticontent.com/media/pictures/d184a06f-db25-4ec6-bc21-b73bc4db0ca9" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -188,7 +195,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://media.staticontent.com/media/pictures/408861fa-25f7-4b7b-a395-a5311e7c51f2" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -203,7 +210,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://media.staticontent.com/media/pictures/80081fcb-d440-45eb-a770-318317a7ae04" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -218,7 +225,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://images.pexels.com/photos/6057833/pexels-photo-6057833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -235,7 +242,7 @@
 
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://images.pexels.com/photos/14236881/pexels-photo-14236881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -251,7 +258,7 @@
 
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -266,7 +273,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://images.pexels.com/photos/13435510/pexels-photo-13435510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -281,7 +288,7 @@
                 </div>
 
                 <div class="card p-0 cardT" style="width: 20rem">
-                    <a id="Passagem" href="tickets.html">
+                    <a id="Passagem" href="#Filter">
                         <img src="https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" style="height: 200px;" alt="...">
                         <div class="card-body">
                             <h6 class="card-text fw-normal">Passagem</h6>
@@ -462,7 +469,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="javascript/funcoes.js"></script>
+    <script src="View/javascript/funcoes.js"></script>
 </body>
 
 </html>

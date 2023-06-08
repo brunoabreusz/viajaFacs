@@ -59,6 +59,21 @@ switch ($url) {
         $controlador = new UserController();
         $controlador->cancellation();
         break;
+    case 'searchVoo':
+        require 'Controller/SearchVooController.php';
+        $controlador = new SearchVooController();
+        $controlador->SearchVoo();
+        break;
+    case 'searchVooError':
+        require 'Controller/SearchVooController.php';
+        $controlador = new SearchVooController();
+        $controlador->SearchVooError();
+        break;
+    case 'checkout':
+        require 'Controller/CheckoutController.php';
+        $controlador = new CheckoutController();
+        $controlador->Checkout();
+        break;
     case 'logout':
         require 'Controller/LogoutController.php';
         $controlador = new LogoutController();

@@ -20,4 +20,11 @@ class CompanhiaAerea
         $this->nomeCompanhia = $nomeCompanhia;
     }
     
+    // SQL para criação das companhias.
+    // INSERT INTO companhia_aerea (idCompanhiaAerea, nomeCompanhia) VALUES
+    // (1, 'Latam Airlines'),
+    // (2, 'Azul'),
+    // (3, 'Gol Airlines'),
+    // (4, 'VoePass');
+
 }

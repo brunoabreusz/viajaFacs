@@ -7,7 +7,7 @@ class Usuario
     private $email;
     private $telefone;
     private $senha;
-    private $id;
+    private $idUsuario;
 
     public function incluir()
     {
@@ -15,22 +15,22 @@ class Usuario
         try {
             require_once('conectionData.php');
             $conn = Data::conectar();
-            $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, id)
-            VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :id)");
+            $sql = $conn->prepare("INSERT INTO usuario (cpf, nome, dataNascimento, email, telefone, senha, idUsuario)
+            VALUES (:cpf, :nome, :dataNascimento, :email, :telefone, :senha, :idUsuario)");
             $sql->bindParam("cpf", $cpf);
             $sql->bindParam("nome", $nome);
             $sql->bindParam("dataNascimento", $dataNascimento);
             $sql->bindParam("email", $email);
             $sql->bindParam("telefone", $telefone);
             $sql->bindParam("senha", $senha);
-            $sql->bindParam("id", $id);
+            $sql->bindParam("idUsuario", $idUsuario);
             $cpf = $this->cpf;
             $nome = $this->nome;
             $dataNascimento = $this->dataNascimento;
             $email  = $this->email;
             $telefone = $this->telefone;
             $senha = $this->senha;
-            $id = $this->id;
+            $idUsuario = $this->idUsuario;
             $sql->execute();
             return 'user.php';
         } catch (PDOException $e) {
@@ -118,13 +118,13 @@ class Usuario
         $this->senha = $senha;
     }
 
-    public function getId()
+    public function getIdUsuario()
     {
-        return $this->id;
+        return $this->idUsuario;
     }
 
-    public function setId($id)
+    public function setIdUsuario($idUsuario)
     {
-        $this->id = $id;
+        $this->idUsuario = $idUsuario;
     }
 }
