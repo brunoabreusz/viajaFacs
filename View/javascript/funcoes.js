@@ -45,21 +45,21 @@ function checkPasswords() {
     alert("As senhas não coincidem. Por favor, tente novamente.");
     return false;
   }
-  
+
   alert("Cadastro concluido.");
 
   setTimeout(() => {
     window.location.href = 'login.html';
   }, 10);
-  
+
   return true;
 }
 
-function checkReclamacao(){
+function checkReclamacao() {
   var textoR = document.forms["reclamacao"]["reclamacaoTxt"].value;
   // var emailR = document.forms["reclamacao"]["reclamacaoEmail"].value;
 
-  if(!textoR){
+  if (!textoR) {
     alert("Preencha a reclamação");
     return false;
   }
@@ -69,7 +69,7 @@ function checkReclamacao(){
   setTimeout(() => {
     location.reload(true)
   }, 10);
-  
+
   return true;
 }
 
@@ -79,3 +79,20 @@ function requestLogin() {
   }, 400);
 
 }
+
+function apenasNumeros(event) {
+  var tecla = event.which || event.keyCode;
+
+  if ((tecla >= 48 && tecla <= 57) || (tecla >= 96 && tecla <= 105)) {
+    // Permite apenas números do teclado numérico (0-9)
+    return true;
+  } else if (tecla === 8 || tecla === 37 || tecla === 39 || tecla === 46) {
+    // Permite a tecla Backspace (8), seta para a esquerda (37), seta para a direita (39) e tecla Delete (46)
+    return true;
+  } else {
+    // Impede a digitação de qualquer outro caractere
+    event.preventDefault();
+    return false;
+  }
+}
+

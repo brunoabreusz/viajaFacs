@@ -42,32 +42,49 @@
     <h2>Passagens aéreas para <?php echo $origem; ?> - <?php echo $destino; ?></h2>
 
     <div class="container mt-3">
-      <form action="checkout.html">
+      <form action="checkout" method="post">
         <h3 class="text-start mb-2 p-2" id="">Somente Ida <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
           </svg></h3>
-          <?php for ($cont = 0; $cont < count($listaVoo); $cont++) { ?>
-        <div class="card">
-          <div class="row g-0 text-center m-2">
-            <div class="col fw-normal">
-              <input class="form-check-input align-text-bottom " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <img src="View/images/logo-viajafacs.png" width="110px" /><p class="card-text fw-normal">Nome Companhia: <b><?php echo $listaVoo[$cont]->getIdCompanhiaAerea(); ?></b></p>
-            </div>
-            <div class="col-sm">
-              <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
-                </svg> <b><?php echo $listaVoo[$cont]->getOrigem(); ?> - <?php echo $listaVoo[$cont]->getDestino(); ?></b></p>
-              <p class="card-text fw-normal">Hora Saida: <b><?php echo $listaVoo[$cont]->getDataHoraSaida(); ?></b></p>
-              <p class="card-text fw-normal">Hora Chegada: <b><?php echo $listaVoo[$cont]->getDataHoraChegada(); ?></b></p>
-            </div>
-            <div class="col-sm">
-              <p class="card-text fw-normal">Qtd. Assentos: <b><?php echo $listaVoo[$cont]->getAssentos(); ?></b>
-              <p class="card-text fw-normal">Preço Voo Economico: <b>R$: <?php echo $listaVoo[$cont]->getPrecoVooEconomico(); ?></b></p> 
-              <p class="card-text fw-normal">Preço Voo Primeira Classe: <b>R$: <?php echo $listaVoo[$cont]->getPrecoVooPrimeiraClasse(); ?></b></p>
+
+        <?php
+        for ($cont = 0; $cont < count($listaVoo); $cont++) {
+          $vooSelecionado = $listaVoo[$cont]; // Obtenha o voo atual do array $listaVoo
+
+          $vooInfo = array(
+            'idPassagemArea' => $vooSelecionado->getIdPassagemAerea(),
+            'origem' => $vooSelecionado->getOrigem(),
+            'destino' => $vooSelecionado->getDestino(),
+            'horaSaida' => $vooSelecionado->getDataHoraSaida(),
+            'horaChegada' => $vooSelecionado->getDataHoraChegada(),
+            'assentos' => $vooSelecionado->getAssentos(),
+            'precoEconomico' => $vooSelecionado->getPrecoVooEconomico(),
+            'precoPrimeiraClasse' => $vooSelecionado->getPrecoVooPrimeiraClasse()
+          );
+        ?>
+
+          <div class="card">
+            <div class="row g-0 text-center m-2">
+              <div class="col fw-normal">
+                <input class="form-check-input align-text-bottom " type="radio" name="ida" id="ida" value="<?php echo $vooSelecionado->getIdPassagemAerea(); ?>">
+                <img src="View/images/logo-viajafacs.png" width="110px" />
+                <p class="card-text fw-normal">Nome Companhia: <b><?php echo $vooSelecionado->getIdCompanhiaAerea(); ?></b></p>
+              </div>
+              <div class="col-sm">
+                <p class="card-text fw-normal"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                  </svg> <b><?php echo $vooSelecionado->getOrigem(); ?> - <?php echo $vooSelecionado->getDestino(); ?></b></p>
+                <p class="card-text fw-normal">Hora Saida: <b><?php echo $vooSelecionado->getDataHoraSaida(); ?></b></p>
+                <p class="card-text fw-normal">Hora Chegada: <b><?php echo $vooSelecionado->getDataHoraChegada(); ?></b></p>
+              </div>
+              <div class="col-sm">
+                <p class="card-text fw-normal">Qtd. Assentos: <b><?php echo $vooSelecionado->getAssentos(); ?></b>
+                <p class="card-text fw-normal">Preço Voo Economico: <b>R$: <?php echo $vooSelecionado->getPrecoVooEconomico(); ?></b></p>
+                <p class="card-text fw-normal">Preço Voo Primeira Classe: <b>R$: <?php echo $vooSelecionado->getPrecoVooPrimeiraClasse(); ?></b></p>
+              </div>
             </div>
           </div>
-        </div>
-        <br>
+          <br>
         <?php } ?>
 
 

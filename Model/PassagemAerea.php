@@ -23,7 +23,7 @@ class PassagemAerea
             $origem = $this->origem;
             $destino = $this->destino;
 
-            $sql = $conn->prepare("SELECT p.origem, p.destino, p.precoVooPrimeiraClasse, p.precoVooEconomico, p.dataHoraChegada, p.dataHoraSaida, p.assentos, c.nomeCompanhia
+            $sql = $conn->prepare("SELECT p.idPassagemAerea, p.origem, p.destino, p.precoVooPrimeiraClasse, p.precoVooEconomico, p.dataHoraChegada, p.dataHoraSaida, p.assentos, c.nomeCompanhia
             FROM passagem_aerea p JOIN companhia_aerea c ON p.idCompanhiaAerea = c.idCompanhiaAerea WHERE p.origem = :origem AND p.destino = :destino");
 
             $sql->bindParam(":origem", $origem);
@@ -35,6 +35,7 @@ class PassagemAerea
 
             while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) {
                 $voo = new PassagemAerea();
+                $voo->setIdPassagemAerea($linha['idPassagemAerea']);
                 $voo->setOrigem($linha['origem']);
                 $voo->setDestino($linha['destino']);
                 $voo->setDataHoraChegada($linha['dataHoraChegada']);
@@ -61,7 +62,7 @@ class PassagemAerea
             $origem = $this->destino; // Inverte origem e destino
             $destino = $this->origem;
 
-            $sql = $conn->prepare("SELECT p.origem, p.destino, p.precoVooPrimeiraClasse, p.precoVooEconomico, p.dataHoraChegada, p.dataHoraSaida, p.assentos, c.nomeCompanhia
+            $sql = $conn->prepare("SELECT p.idPassagemAerea, p.origem, p.destino, p.precoVooPrimeiraClasse, p.precoVooEconomico, p.dataHoraChegada, p.dataHoraSaida, p.assentos, c.nomeCompanhia
             FROM passagem_aerea p JOIN companhia_aerea c ON p.idCompanhiaAerea = c.idCompanhiaAerea WHERE p.origem = :origem AND p.destino = :destino");
 
             $sql->bindParam(":origem", $origem);
@@ -73,6 +74,7 @@ class PassagemAerea
 
             while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) {
                 $voo = new PassagemAerea();
+                $voo->setIdPassagemAerea($linha['idPassagemAerea']);
                 $voo->setOrigem($linha['origem']);
                 $voo->setDestino($linha['destino']);
                 $voo->setDataHoraChegada($linha['dataHoraChegada']);
