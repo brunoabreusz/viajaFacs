@@ -57,7 +57,18 @@
                     <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
                 </svg> Detalhamento da compra:</h3>
             <div class="m-3">
-                <?php if (!empty($listaVooIda)) : ?>
+                <?php if (!empty($listaVooIda) && !empty($listaVooVolta)) : ?>
+                    <h6 class="card-title fw-normal"><b id="AmareloTexto">Passagem: </b><?php echo $listaVooIda[0]->getOrigem(), " - ", $listaVooIda[0]->getDestino(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Saida: </b><?php echo $listaVooIda[0]->getDataHoraSaida(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Chegada: </b><?php echo $listaVooIda[0]->getDataHoraChegada(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Qtd. Assentos: </b><?php echo $listaVooIda[0]->getAssentos(); ?></h6>
+                    <hr>
+                    <h6 class="card-title fw-normal"><b id="AmareloTexto">Passagem: </b><?php echo $listaVooVolta[0]->getOrigem(), " - ", $listaVooVolta[0]->getDestino(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Saida: </b><?php echo $listaVooVolta[0]->getDataHoraSaida(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Chegada: </b><?php echo $listaVooVolta[0]->getDataHoraChegada(); ?></h6>
+                    <h6 class="card-text fw-normal"><b id="AmareloTexto">Qtd. Assentos: </b><?php echo $listaVooVolta[0]->getAssentos(); ?></h6>
+                    <hr>
+                <?php elseif (!empty($listaVooIda)) : ?>
                     <h6 class="card-title fw-normal"><b id="AmareloTexto">Passagem: </b><?php echo $listaVooIda[0]->getOrigem(), " - ", $listaVooIda[0]->getDestino(); ?></h6>
                     <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Saida: </b><?php echo $listaVooIda[0]->getDataHoraSaida(); ?></h6>
                     <h6 class="card-text fw-normal"><b id="AmareloTexto">Hora Chegada: </b><?php echo $listaVooIda[0]->getDataHoraChegada(); ?></h6>
@@ -91,7 +102,18 @@
 
                 <h4 class="m-3">Escolha sua classe</h4>
                 <div class="row m-3">
-                    <?php if (!empty($listaVooIda)) : ?>
+                    <?php if (!empty($listaVooIda) && !empty($listaVooVolta)) : ?>
+                        <?php if (!empty($listaVooIda) && !empty($listaVooVolta)) : ?>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <h6 class="card-title fw-normal"><b id="AmareloTexto">Primeira classe:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse() + $listaVooVolta[0]->getPrecoVooPrimeiraClasse(); ?></h6>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <h6 class="card-title fw-normal"><b>Classe econômica:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooEconomico() + $listaVooVolta[0]->getPrecoVooEconomico(); ?></h6>
+                            </div>
+                        <?php endif; ?>
+                    <?php elseif (!empty($listaVooIda)) : ?>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                             <h6 class="card-title fw-normal"><b id="AmareloTexto">Primeira classe:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse(); ?></h6>

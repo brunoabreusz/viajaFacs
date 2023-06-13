@@ -66,7 +66,7 @@
           <div class="card">
             <div class="row g-0 text-center m-2">
               <div class="col fw-normal">
-                <input class="form-check-input align-text-bottom " type="radio" name="ida" id="ida" value="<?php echo $vooSelecionado->getIdPassagemAerea(); ?>">
+                <input class="form-check-input align-text-bottom " type="radio" name="ida" id="ida" value="<?php echo $vooSelecionado->getIdPassagemAerea(); ?> " required>
                 <img src="View/images/logo-viajafacs.png" width="110px" />
                 <p class="card-text fw-normal">Nome Companhia: <b><?php echo $vooSelecionado->getIdCompanhiaAerea(); ?></b></p>
               </div>
