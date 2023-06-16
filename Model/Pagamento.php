@@ -51,7 +51,35 @@ class Pagamento
         }
     }
 
-
+    public function buy($idUsuario)
+    {
+        try {
+            $conn = Data::conectar();
+    
+            // Verificar se o valor de idPassagemAerea existe na tabela passagem_aerea
+            $sqlVerify = $conn->prepare("SELECT idPassagemAerea FROM passagem_aerea WHERE idPassagemAerea = :idPassagemAerea");
+            $sqlVerify->bindParam(':idPassagemAerea', $this->idPassagemAerea);
+            $sqlVerify->execute();
+    
+            // Verificar se há resultados encontrados
+            if ($sqlVerify->rowCount() > 0) {
+                $sql = $conn->prepare("INSERT INTO pagamento (idPassagemAerea, valorPagamento, idUsuario) VALUES (:idPassagemAerea, :valorPagamento, :idUsuario)");
+    
+                $valorPagamento = $this->valorPagamento;
+    
+                $sql->bindParam(':idPassagemAerea', $this->idPassagemAerea);
+                $sql->bindParam(':valorPagamento', $valorPagamento);
+                $sql->bindParam(':idUsuario', $idUsuario); // Atribuir o valor do idUsuario ao parâmetro
+    
+                $sql->execute();
+            } else {
+                echo "O ID da Passagem Aerea está inválido.";
+            }
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+        }
+    }
+    
     public function getIdPagamento()
     {
         return $this->idPagamento;

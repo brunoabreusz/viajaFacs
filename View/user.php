@@ -74,8 +74,10 @@
 
                 <div class="col text-start mb-3">
                     <?php
+
                     if (isset($_SESSION['nome'])) {
                         $nome = $_SESSION['nome'];
+                        $idUsuario = $_SESSION['idUsuario'];
                         echo "<h2>Olá, $nome!</h2>";
                     } else {
                         echo "<h2>Olá, usuário!</h2>";

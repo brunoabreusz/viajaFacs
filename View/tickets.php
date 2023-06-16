@@ -110,7 +110,7 @@
           <div class="card">
             <div class="row g-0 text-center m-2">
               <div class="col fw-normal">
-                <input class="form-check-input align-text-bottom" type="radio" name="volta" id="volta" value="<?php echo $vooSelecionadoInvertido->getIdPassagemAerea(); ?>">
+                <input class="form-check-input align-text-bottom" type="radio" name="volta" id="volta" value="<?php echo $vooSelecionadoInvertido->getIdPassagemAerea(); ?>" required>
                 <img src="View/images/logo-viajafacs.png" width="110px" />
                 <p class="card-text fw-normal">Nome Companhia: <b><?php echo $vooSelecionadoInvertido->getIdCompanhiaAerea(); ?></b></p>
               </div>

@@ -24,10 +24,13 @@ class LoginController
 
             if ($result) {
                 // Credenciais corretas
-                $nome = $this->obterNomeUsuarioDoBancoDeDados($email, $senha);
-                if ($nome) {
+                $dadosUsuario = $this->obterDadosUsuarioDoBancoDeDados($email, $senha);
+                if ($dadosUsuario) {
+                    $idUsuario = $dadosUsuario['idUsuario'];
+                    $nome = $dadosUsuario['nome'];
                     session_start();
                     $_SESSION['email'] = $email;
+                    $_SESSION['idUsuario'] = $idUsuario; // Adiciona o ID do usuário à sessão
                     $_SESSION['nome'] = $nome;
                     header('Location: user');
                     exit();
@@ -45,13 +48,11 @@ class LoginController
         require 'View/login.html';
     }
 
-    public function obterNomeUsuarioDoBancoDeDados($email, $senha)
+    public function obterDadosUsuarioDoBancoDeDados($email, $senha)
     {
-        // $data = new Data();
         $conn = Data::conectar();
 
-        // Procura no banco de dados o email e a senha.
-        $query = "SELECT nome FROM usuario WHERE email = :email AND senha = :senha";
+        $query = "SELECT idUsuario, nome FROM usuario WHERE email = :email AND senha = :senha";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senha);
@@ -60,7 +61,11 @@ class LoginController
         $result = $stmt->fetch();
 
         if ($result) {
-            return $result['nome'];
+            $dadosUsuario = [
+                'idUsuario' => $result['idUsuario'],
+                'nome' => $result['nome']
+            ];
+            return $dadosUsuario;
         } else {
             return null; // Usuário não encontrado
         }

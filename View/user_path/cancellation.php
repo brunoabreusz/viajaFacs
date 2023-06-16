@@ -66,7 +66,7 @@
                         <h2>Digite o código da sua passagem para efetuar o cancelamento</h2> <br>
                         <form name="reclamacao" onsubmit="return checkReclamacao()">
                             <div class="text-start mb-3">
-                                <input type="text" class="form-control" placeholder="645616354564" id="idPassagem"
+                                <input type="text" class="form-control" placeholder="500" id="idPassagem"
                                     required>
                             </div>
 

@@ -84,15 +84,28 @@ function apenasNumeros(event) {
   var tecla = event.which || event.keyCode;
 
   if ((tecla >= 48 && tecla <= 57) || (tecla >= 96 && tecla <= 105)) {
-    // Permite apenas números do teclado numérico (0-9)
     return true;
   } else if (tecla === 8 || tecla === 37 || tecla === 39 || tecla === 46) {
-    // Permite a tecla Backspace (8), seta para a esquerda (37), seta para a direita (39) e tecla Delete (46)
     return true;
   } else {
-    // Impede a digitação de qualquer outro caractere
     event.preventDefault();
     return false;
   }
 }
 
+function formatMonthAndYear(input) {
+  var dateValue = input.value;
+  var formattedValue = dateValue.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+  if (formattedValue.length > 6) {
+      formattedValue = formattedValue.substr(0, 6); // Limita o valor a no máximo 6 dígitos (2 dígitos para o mês + 4 dígitos para o ano)
+  }
+
+  if (formattedValue.length >= 2) {
+      var month = formattedValue.substr(0, 2);
+      var year = formattedValue.substr(2);
+      formattedValue = month + '/' + year;
+  }
+
+  input.value = formattedValue;
+}

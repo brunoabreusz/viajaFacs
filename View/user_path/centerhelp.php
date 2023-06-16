@@ -65,7 +65,7 @@
                     <form name="reclamacao" onsubmit="return checkReclamacao()">
                         <div class="text-start mb-3">
                             <label class="form-label">ID da Passagem:</label>
-                            <input type="text" class="form-control" placeholder="645616354564" id="idPassagem" required>
+                            <input type="text" class="form-control" placeholder="500" id="idPassagem" required>
                         </div>
 
                         <div class="text-start mb-3">

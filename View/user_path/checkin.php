@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ViajaFacs - Check-in</title>
-    <link rel="icon" href="../images/iconviajafacs.png" type="image/png">
+    <link rel="icon" href="../View/images/iconviajafacs.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../View/styles/style.css">
@@ -64,9 +64,9 @@
                     </div>
                     <div class="col-12">
                         <h2>Digite o código da sua passagem para efetuar seu check-in</h2> <br>
-                        <form name="reclamacao" onsubmit="return checkReclamacao()">
+                        <form method="post" action="checkin" onsubmit="return checkReclamacao()">
                             <div class="text-start mb-3">
-                                <input type="text" class="form-control" placeholder="645616354564" id="idPassagem"
+                                <input type="text" class="form-control" placeholder="500" id="idPassagem"
                                     required>
                             </div>
 

@@ -74,6 +74,11 @@ switch ($url) {
         $controlador = new CheckoutController();
         $controlador->Checkout();
         break;
+    case 'buy':
+        require 'Controller/CheckoutController.php';
+        $controlador = new CheckoutController();
+        $controlador->PagamentoUser();
+        break;
     case 'logout':
         require 'Controller/LogoutController.php';
         $controlador = new LogoutController();
