@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ViajaFacs - Cancelamaneto</title>
     <link rel="icon" href="../View/images/iconviajafacs.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../View/styles/style.css">
 </head>
 
@@ -16,12 +15,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand">
-                <img src="../View/images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy"
-                    style="margin-top: -1px;" />
+                <img src="../View/images/logo-viajafacs.png" height="60" alt="ViajaFacs" loading="lazy" style="margin-top: -1px;" />
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -52,7 +49,7 @@
             </div>
             <div class="col-md-6 order-md-1">
                 <div class="text-start mb-3">
-                <?php
+                    <?php
                     if (isset($_SESSION['nome'])) {
                         $nome = $_SESSION['nome'];
                         echo "<h4>Olá, $nome!</h4>";
@@ -62,26 +59,45 @@
                     ?>
                 </div>
                 <div class="col-12">
-                    <div class="col-12">
-                        <h2>Digite o código da sua passagem para efetuar o cancelamento</h2> <br>
-                        <form name="reclamacao" onsubmit="return checkReclamacao()">
-                            <div class="text-start mb-3">
-                                <input type="text" class="form-control" placeholder="500" id="idPassagem"
-                                    required>
-                            </div>
+                    <h2 class="mb-">Para fazer o cancelamento, por favor, clique na passagem abaixo.</h2>
+                    <form method="post" action="cancelamentoAtualizar">
 
-                            <button type="submit" class="btn btn-success btn-sm" id="AmareloBtn">Realizar
-                                Cancelamaneto</button>
-                        </form>
-                    </div>
+                        <?php if (count($passagens) > 0) : ?>
+                            <?php foreach ($passagens as $passagem) : ?>
+                                <div class="card cardT mt-2 mb-2">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <input class="form-check-input align-text-bottom " type="radio" name="idPassagem" id="idPassagem" value="<?php echo $passagem['idPassagem'] ?>" required>
+                                            </div>
+                                            <div class="col-11">
+                                                <h6 class="card-title fw-normal">
+                                                    <b id="AmareloTexto">ID Passagem: </b>
+                                                    <?php echo '00' . $passagem['idPassagem'] . ' - ' . $passagem['origem'] . ' - ' . $passagem['destino']; ?>
+                                                    <h6 class="card-text fw-normal"><b class="text-danger">Cancelamento: </b><?php echo $passagem['statusCancelamento'] == 0 ? 'Desabilitado' : 'Habilitado'; ?>
+                                                    </h6>
+                                            </div>
+                                        </div>
+
+                                        </h6>
+                                    </div>
+
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else : ?>
+                            <p>Você não possui passagens.</p>
+                        <?php endif; ?>
+
+
+                        <button type="submit" class="btn btn-success btn-sm" id="AmareloBtn">Realizar
+                            Cancelamento</button>
+                    </form>
                 </div>
             </div>
         </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="../View/javascript/funcoes.js"></script>
 </body>
 

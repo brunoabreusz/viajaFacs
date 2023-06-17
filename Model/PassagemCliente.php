@@ -10,31 +10,38 @@ class PassagemCliente
     private $statusCheckin;
     private $statusCancelamento;
 
-    // public function realizarCheckin($idPassagem)
-    // {
-    //     try {
-    //         $conn = Data::conectar();
+    public function passagens($idUsuario)
+    {
+        $conn = Data::conectar();
+        $sql = "SELECT pc.idPassagem, pc.idPagamento, pc.idUsuario, pc.statusCheckin, pc.statusCancelamento, pa.origem, pa.destino, pa.dataHoraSaida, pa.dataHoraChegada
+                FROM passagem_cliente AS pc
+                INNER JOIN passagem_aerea AS pa ON pc.idPassagem = pa.idPassagemAerea
+                WHERE pc.idUsuario = :idUsuario";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':idUsuario', $idUsuario);
+        $stmt->execute();
+        $passagens = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    //         // Verificar se o idPassagem existe na tabela passagem_cliente
-    //         $sqlVerify = $conn->prepare("SELECT idPassagem FROM passagem_cliente WHERE idPassagem = :idPassagem");
-    //         $sqlVerify->bindParam(':idPassagem', $idPassagem);
-    //         $sqlVerify->execute();
+        return $passagens;
+    }
 
-    //         // Verificar se há resultados encontrados
-    //         if ($sqlVerify->rowCount() > 0) {
-    //             // Atualizar o statusCheckin para 1
-    //             $sql = $conn->prepare("UPDATE passagem_cliente SET statusCheckin = 1 WHERE idPassagem = :idPassagem");
-    //             $sql->bindParam(':idPassagem', $idPassagem);
-    //             $sql->execute();
+    public function alterarStatusCheckin($idPassagem)
+    {
+        $conn = Data::conectar();
+        $sql = "UPDATE passagem_cliente SET statusCheckin = 1 WHERE idPassagem = :idPassagem";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':idPassagem', $idPassagem);
+        $stmt->execute();
+    }
 
-    //             echo "Check-in realizado com sucesso!";
-    //         } else {
-    //             echo "O ID da Passagem está inválido.";
-    //         }
-    //     } catch (PDOException $e) {
-    //         echo "Connection failed: " . $e->getMessage();
-    //     }
-    // }
+    public function alterarStatusCancelamento($idPassagem)
+    {
+        $conn = Data::conectar();
+        $sql = "UPDATE passagem_cliente SET statusCancelamento = 1 WHERE idPassagem = :idPassagem";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':idPassagem', $idPassagem);
+        $stmt->execute();
+    }
 
     public function getIdPassagem()
     {

@@ -6,7 +6,8 @@ class UsuarioController {
    public function cadastrarUsuario() {
        // Verifica se o email já está cadastrado
        $email = $_POST['email'];
-       if ($this->verificarEmailCadastrado($email)) {
+       $usuario = new Usuario();
+       if ($usuario->verificarEmailCadastrado($email)) {
            echo "<script>alert('O email já está cadastrado.');</script>";
            require "View/register.html";
            exit();
@@ -28,22 +29,4 @@ class UsuarioController {
        exit(); 
    }
 
-   private function verificarEmailCadastrado($email) {
-       try {
-           $query = "SELECT * FROM usuario WHERE email = :email";
-           $conn = Data::conectar(); // Conecta ao banco de dados
-           $stmt = $conn->prepare($query);
-           $stmt->bindParam(':email', $email);
-           $stmt->execute();
-
-           if ($stmt->rowCount() > 0) {
-               return true; // Email já cadastrado
-           } else {
-               return false; // Email não cadastrado
-           }
-       } catch (PDOException $e) {
-           echo "Erro ao verificar o email cadastrado: " . $e->getMessage();
-           return false;
-       }
-   }
 }

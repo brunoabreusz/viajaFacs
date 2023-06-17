@@ -49,15 +49,30 @@ switch ($url) {
         $controlador = new UserController();
         $controlador->checkIn();
         break;
+    case 'user/checkinAtualizar':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->alterarStatusCheckin();
+        break;
     case 'user/centerhelp':
         require 'Controller/UserController.php';
         $controlador = new UserController();
         $controlador->centerHelp();
         break;
+    case 'user/centerhelpInsert':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->centerHelpInsert();
+        break;
     case 'user/cancellation':
         require 'Controller/UserController.php';
         $controlador = new UserController();
         $controlador->cancellation();
+        break;
+    case 'user/cancelamentoAtualizar':
+        require 'Controller/UserController.php';
+        $controlador = new UserController();
+        $controlador->alterarStatusCancelamento();
         break;
     case 'searchVoo':
         require 'Controller/SearchVooController.php';

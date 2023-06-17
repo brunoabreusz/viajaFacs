@@ -1,8 +1,6 @@
 <?php
 
 require_once './Model/Pagamento.php';
-require_once './Model/PassagemCliente.php';
-require_once './Model/Usuario.php';
 
 class CheckoutController
 {

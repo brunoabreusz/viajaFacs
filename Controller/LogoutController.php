@@ -13,7 +13,3 @@ class LogoutController
     }
 }
 
-// if ($_GET['url'] === 'logout') {
-//     $logoutController = new LogoutController();
-//     $logoutController->Logout();
-// }

@@ -72,9 +72,8 @@
         <div class="container p-4" id="Filter">
             <div class="row">
 
-                <div class="col text-start mb-3">
+                <div class="col-4 text-start mb-1">
                     <?php
-
                     if (isset($_SESSION['nome'])) {
                         $nome = $_SESSION['nome'];
                         $idUsuario = $_SESSION['idUsuario'];
@@ -85,7 +84,7 @@
                     ?>
                 </div>
 
-                <div class="col text-start mb-3">
+                <div class="col-6 text-start mb-1">
                     <a href="user/myprofile" id="A-NoDecoration">
                         <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -97,31 +96,26 @@
 
             <div class="row">
                 <h3>Suas Passagens</h3>
-                <!-- <div class="col">
-                    <div class="card card cardT">
-                        <div class="card-body">
-                            <h6 class="card-title fw-normal"><b id="AmareloTexto">ID Passagem:</b> 500 - Rio de
-                                Janeiro/São Paulo</h6>
-                            <h6 class="card-text fw-normal"><b id="AmareloTexto">Código:</b> 54656454</h6>
-                            <h6 class="card-text fw-normal"><b id="AmareloTexto">Horário:</b> 10AM</h6>
+                <?php if (count($passagens) > 0) : ?>
+                    <?php foreach ($passagens as $passagem) : ?>
+                        <?php if ($passagem['statusCancelamento'] != 1) : ?>
+                        <div class="col">
+                            <div class="card cardT">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-normal">
+                                        <b id="AmareloTexto">ID Passagem: </b>
+                                        <?php echo '00' . $passagem['idPassagem'] . ' - ' . $passagem['origem'] . ' - ' . $passagem['destino']; ?>
+                                    </h6>
+                                    <h6 class="card-text fw-normal"><b class="text-success">Checkin: </b><?php echo $passagem['statusCheckin'] == 0 ? 'Desabilitado' : 'Habilitado'; ?></h6>
+                                    <h6 class="card-text fw-normal"><b class="text-danger">Cancelamento: </b><?php echo $passagem['statusCancelamento'] == 0 ? 'Falso' : 'Ativo'; ?></h6>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div> -->
-
-                <div class="col">
-                    <div class="card cardT">
-                        <div class="card-body">
-                            <h6 class="card-title fw-normal"><b id="AmareloTexto">ID Passagem:</b> 500 - Rio de
-                                Janeiro/São Paulo</h6>
-                            <h6 class="card-text fw-normal"><b id="AmareloTexto">Código:</b> 54656454</h6>
-                            <h6 class="card-text fw-normal"><b id="AmareloTexto">Horário:</b> 10AM</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <h6 class="card-title fw-normal"><b>Null</b></h6>
-                </div>
+                        <?php endif; ?>                       
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <p>Você não possui passagens.</p>
+                <?php endif; ?>
 
             </div>
         </div>
