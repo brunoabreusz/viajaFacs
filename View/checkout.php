@@ -86,20 +86,20 @@
                 <div class="row m-3">
                     <?php if (!empty($listaVooIda) && !empty($listaVooVolta)) : ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="primeiraClasse" id="primeiraClasse" value="<?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse() + $listaVooVolta[0]->getPrecoVooPrimeiraClasse(); ?>">
+                            <input class="form-check-input" type="radio" name="classe" id="primeiraClasse" value="<?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse() + $listaVooVolta[0]->getPrecoVooPrimeiraClasse(); ?>" required>
                             <h6 class="card-title fw-normal"><b id="AmareloTexto">Primeira classe:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse() + $listaVooVolta[0]->getPrecoVooPrimeiraClasse(); ?></h6>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="precoEconomico" id="precoEconomico" value="<?php echo $listaVooIda[0]->getPrecoVooEconomico() + $listaVooVolta[0]->getPrecoVooEconomico(); ?>">
+                            <input class="form-check-input" type="radio" name="classe" id="precoEconomico" value="<?php echo $listaVooIda[0]->getPrecoVooEconomico() + $listaVooVolta[0]->getPrecoVooEconomico(); ?>" required>
                             <h6 class="card-title fw-normal"><b>Classe econômica:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooEconomico() + $listaVooVolta[0]->getPrecoVooEconomico(); ?></h6>
                         </div>
                     <?php elseif (!empty($listaVooIda)) : ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="primeiraClasse" id="primeiraClasse" value="<?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse(); ?>">
+                            <input class="form-check-input" type="radio" name="classe" id="primeiraClasse" value="<?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse(); ?>" required>
                             <h6 class="card-title fw-normal"><b id="AmareloTexto">Primeira classe:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooPrimeiraClasse(); ?></h6>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="precoEconomico" id="precoEconomico" value="<?php echo $listaVooIda[0]->getPrecoVooEconomico(); ?>">
+                            <input class="form-check-input" type="radio" name="classe" id="precoEconomico" value="<?php echo $listaVooIda[0]->getPrecoVooEconomico(); ?>" required>
                             <h6 class="card-title fw-normal"><b>Classe econômica:</b> R$: <?php echo $listaVooIda[0]->getPrecoVooEconomico(); ?></h6>
                         </div>
                         <!-- <//?php elseif (!empty($listaVooVolta)) : ?>
@@ -119,26 +119,26 @@
                     <div class="row">
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Número do cartão:</label>
-                            <input type="text" class="form-control" placeholder="5322 0146 4397 8449" maxlength="19" minlength="19" onkeydown="return apenasNumeros(event)">
+                            <input type="text" class="form-control" placeholder="5322 0146 4397 8449" maxlength="19" minlength="19" onkeydown="return apenasNumeros(event)" required>
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Titular:</label>
-                            <input type="text" name="titular" class="form-control" placeholder="Nome do Titular">
+                            <input type="text" name="titular" class="form-control" placeholder="Nome do Titular" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Data de Validade:</label>
-                            <input type="text" class="form-control" placeholder="mm/aaaa" oninput="formatMonthAndYear(this)" maxlength="7">
+                            <input type="text" class="form-control" placeholder="mm/aaaa" oninput="formatMonthAndYear(this)" maxlength="7" required>
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Cód. Segurança</label>
-                            <input type="text" name="cvv" class="form-control" placeholder="240" maxlength="3" onkeydown="return apenasNumeros(event)">
+                            <input type="text" name="cvv" class="form-control" placeholder="240" maxlength="3" onkeydown="return apenasNumeros(event)" required>
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">CPF</label>
-                            <input type="text" name="cpf" class="form-control" placeholder="000.000.000-00" oninput="mascara(this)" maxlength="14" minlength="14">
+                            <input type="text" name="cpf" class="form-control" placeholder="000.000.000-00" oninput="mascara(this)" maxlength="14" minlength="14" required>
                         </div>
                     </div>
                     <?php
