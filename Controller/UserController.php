@@ -77,12 +77,15 @@ class UserController
         $idUsuario = $_POST['idUsuario'];
         $comentarioUsuario = $_POST['comentarioUsuario'];
 
+        $passagemCliente = new PassagemCliente();
+        $passagens = $passagemCliente->passagens($idUsuario);
+
         $reclamacao = new Reclamacao();
         $reclamacao->inserirReclamacao($idUsuario, $comentarioUsuario);
 
         $reclamacoes = $reclamacao->consultarReclamacao($idUsuario);
 
-        require 'View/user.php';
+        header('Location: ../user');
     }
 
     public function cancellation()
