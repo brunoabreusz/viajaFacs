@@ -13,10 +13,14 @@ class PassagemCliente
     public function passagens($idUsuario)
     {
         $conn = Data::conectar();
-        $sql = "SELECT pc.idPassagem, pc.idPagamento, pc.idUsuario, pc.statusCheckin, pc.statusCancelamento, pa.origem, pa.destino, pa.dataHoraSaida, pa.dataHoraChegada
-                FROM passagem_cliente AS pc
-                INNER JOIN passagem_aerea AS pa ON pc.idPassagem = pa.idPassagemAerea
-                WHERE pc.idUsuario = :idUsuario";
+        $sql = "SELECT pc.idPassagem, pc.idPagamento, pc.idUsuario, pc.statusCheckin, pc.statusCancelamento,
+        pg.idPassagemAerea,
+        pa.origem, pa.destino,
+        pa.dataHoraSaida, pa.dataHoraChegada
+        FROM passagem_cliente AS pc
+        INNER JOIN pagamento AS pg ON pc.idPagamento = pg.idPagamento
+        INNER JOIN passagem_aerea AS pa ON pg.idPassagemAerea = pa.idPassagemAerea
+        WHERE pc.idUsuario = :idUsuario";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':idUsuario', $idUsuario);
         $stmt->execute();

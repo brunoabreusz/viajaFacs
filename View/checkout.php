@@ -119,26 +119,26 @@
                     <div class="row">
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Número do cartão:</label>
-                            <input type="text" class="form-control" placeholder="5322 0146 4397 8449" maxlength="19" minlength="19" onkeydown="return apenasNumeros(event)" required>
+                            <input type="text" class="form-control" placeholder="5322 0146 4397 8449" maxlength="19" minlength="19" onkeydown="return apenasNumeros(event)">
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Titular:</label>
-                            <input type="text" name="titular" class="form-control" placeholder="Nome do Titular" required>
+                            <input type="text" name="titular" class="form-control" placeholder="Nome do Titular">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Data de Validade:</label>
-                            <input type="text" class="form-control" placeholder="mm/aaaa" oninput="formatMonthAndYear(this)" maxlength="7" required>
+                            <input type="text" class="form-control" placeholder="mm/aaaa" oninput="formatMonthAndYear(this)" maxlength="7">
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">Cód. Segurança</label>
-                            <input type="text" name="cvv" class="form-control" placeholder="240" maxlength="3" onkeydown="return apenasNumeros(event)" required>
+                            <input type="text" name="cvv" class="form-control" placeholder="240" maxlength="3" onkeydown="return apenasNumeros(event)">
                         </div>
                         <div class="form-group col">
                             <label class="card-title fw-normal m-1">CPF</label>
-                            <input type="text" name="cpf" class="form-control" placeholder="000.000.000-00" oninput="mascara(this)" maxlength="14" minlength="14" required>
+                            <input type="text" name="cpf" class="form-control" placeholder="000.000.000-00" oninput="mascara(this)" maxlength="14" minlength="14">
                         </div>
                     </div>
                     <?php
@@ -173,10 +173,15 @@
                                     privacidade</b></a>.</label>
                     </div>
 
-                    <input type="hidden" name="idPassagemAerea" value="<?php echo $listaVooIda[0]->getIdPassagemAerea(); ?>">
-                    <?php if (isset($listaVooVolta) && isset($listaVooVolta[0])) : ?>
+                    <?php if (isset($listaVooIda[0])) : ?>
+                        <input type="hidden" name="idPassagemAerea" value="<?php echo $listaVooIda[0]->getIdPassagemAerea(); ?>">
+                    <?php endif; ?>
+
+                    <?php if (isset($listaVooIda[0]) && isset($listaVooVolta[0])) : ?>
+                        <input type="hidden" name="idPassagemAerea" value="<?php echo $listaVooIda[0]->getIdPassagemAerea(); ?>">
                         <input type="hidden" name="idPassagemAereaV" value="<?php echo $listaVooVolta[0]->getIdPassagemAerea(); ?>">
                     <?php endif; ?>
+
 
                     <button type="submit" class="btn btn-primary mt-3 mb-3" id="AmareloBtn">Confirmar pagamento</button>
                 </div>
